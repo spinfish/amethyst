@@ -1,0 +1,8 @@
+{
+  "name": "Amethyst",
+  "description": "A calm, deep purple theme for those seeking serenity.",
+  "version": "1.0.0",
+  "author": "mackenzie#0173",
+  "theme": "_index.scss",
+  "license": "MIT"
+}

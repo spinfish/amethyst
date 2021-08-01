@@ -1,0 +1,96 @@
+// ---------------------------- Nitro ---------------------------- \\
+.tier1-1ttHRY {
+  &.banner-3Kac2g {
+    border-radius: 8px;
+    background-image: linear-gradient(to right, rgb(167, 100, 237), rgb(226, 146, 170));
+  }
+}
+
+// ---------------------------- Stage discovery ---------------------------- \\
+#stage-discovery-tab {
+  .container-S9SaVf {
+    border-color: var(--background-tertiary);
+  }
+}
+
+#app-mount {
+  // ---------------------------- Friend list ---------------------------- \\
+  .peopleColumn-29fq28 {
+    background-color: var(--background-accent);
+  }
+
+  // ---------------------------- Activity card ---------------------------- \\
+  .itemCard-v9viV7 {
+    border: none;
+    box-shadow: 0 0 0 1px var(--background-secondary-alt);
+    transition: 200ms background-color;
+
+    &:hover {
+      background-color: var(--background-modifier-hover);
+    }
+
+    &.active-1xchHY {
+      background-color: var(--background-modifier-selected);
+    }
+  }
+
+  // ---------------------------- Server discovery ---------------------------- \\
+  .pageWrapper-1PgVDX {
+    background-color: var(--background-accent);
+  }
+
+  .selectedCategoryItem-FHKU_o {
+    > .itemInner-gPkiWb {
+      background-color: var(--background-modifier-selected);
+    }
+  }
+
+  // ---------------------------- SERVER BOOSTING ---------------------------- \\
+
+  // All selectors are in order of boosting page -> settings
+  // including union (e.g. tierUnlocked1, tierUnlocked2)
+
+  .perksModalContentWrapper-2HU6uL {
+    background-color: var(--background-accent);
+  }
+
+  .tierMarker-5HkGJ_ {
+    &[style*="background: rgb(32, 34, 37)"] {
+      background-color: var(--background-primary) !important;
+    }
+  }
+
+  .barBackground-2EEiLw {
+    background-color: var(--background-tertiary)
+  }
+
+  .background-3xPPFc {
+    color: var(--background-tertiary);
+  }
+
+  .tierInProgress-3mBoXq {
+    background-color: var(--background-tertiary);
+  }
+
+  .tierMarkerBackground-3q29am {
+    background-color: var(--background-secondary);
+  }
+
+  .tierHeaderLocked-1s2JJz,
+  .tierHeaderLocked-3S508x {
+    background-color: var(--background-secondary);
+  }
+
+  .tierBody-16Chc9,
+  .tierBody-3aUxuc {
+    background-color: var(--background-tertiary);
+  }
+
+  .perk-2WeBWW {
+    background-color: var(--background-secondary);
+  }
+
+  .backgroundRed-2jrPZy { // Error popup on server boost
+    background-color: rgba(var(--amethyst-red-rgb), 0.8);
+  }
+}

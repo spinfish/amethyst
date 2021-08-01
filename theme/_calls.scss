@@ -1,0 +1,63 @@
+@mixin call-button($normal, $hover-or-active) {
+  --call-button-normal: #{$normal};
+  --call-button-hover-active: #{$hover-or-active};
+}
+
+// ---------------------------- Voice calls ---------------------------- \\
+.callContainer-36WRfH {
+  @at-root #app-mount & {
+    background-color: var(--background-secondary-alt);
+
+    .status-1WEaea { // Muted badge on avatar
+      background-color: var(--amethyst-red);
+    }
+  }
+
+  .participantsButton-KYW-IW { // Show/hide participants
+    background-color: var(--background-secondary-alt) !important;
+  }
+
+  .background-ujHpbY { // Participant card
+    background-color: var(--background-tertiary) !important;
+  }
+
+  .tile-2naSqK { // No one else is here yet...
+    background-color: var(--background-primary);
+  }
+
+  .colorable-1bkp8v { // Call buttons
+    background-color: var(--call-button-normal);
+
+    &:hover,
+    &.active-1QRrIS {
+      background-color: var(--call-button-hover-active);
+    }
+
+    &.primaryDark-3mSFDl { // Camera and Share Your screen
+      @include call-button(var(--background-accent), rgba(var(--amethyst-brand-hover-rgb), 0.5));
+    }
+
+    &.white-3GPOIp { // Mute/unmute
+      @include call-button(var(--amethyst-brand), var(--amethyst-brand-hover));
+
+      path {
+        color: white;
+      }
+    }
+
+    &.red-33-Lnk { // Disconnect
+      @include call-button(var(--amethyst-red), red);
+    }
+  }
+}
+
+// ---------------------------- Streaming ---------------------------- \\
+#app-mount {
+  .streamPreview-2-WUWT { // Popout from hovering streamer's VC username
+    background-color: var(--background-tertiary);
+
+    > .previewContainer-12UlHl { // Top part where preview is embedded
+      background-color: inherit;
+    }
+  }
+}

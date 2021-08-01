@@ -1,0 +1,31 @@
+// ---------------------------- Bot tags ---------------------------- \\
+.botTag-2WPJ74 {
+  background-color: rgba(var(--amethyst-cyan-rgb), 0.75);
+}
+
+// ---------------------------- New mentions ---------------------------- \\
+.mention-1f5kbO {
+  background-color: var(--amethyst-red);
+}
+
+// ---------------------------- Circle mentions ---------------------------- \\
+.wrapper-232cHJ { // Unread tab
+  background-color: var(--amethyst-red);
+}
+
+.numberBadge-2s8kKX { // Pinged in a server, new DM
+  background-color: var(--amethyst-red) !important;
+}
+
+.textBadge-1iylP6 {
+  // Red badges e.g. LIVE
+  &[style*="359"] {
+    background-color: var(--amethyst-brand) !important;
+  }
+
+  // Blurple badges e.g. BETA and NEW
+  &[style*="235"],
+  &.newBadge-1Is7Nf {
+    background-color: rgba(var(--amethyst-cyan), 0.35) !important;
+  }
+}

@@ -1,0 +1,108 @@
+// ---------------------------- Text area ---------------------------- \\
+.toolbar-2bjZV7 { // Markdown tooltip
+  box-shadow: 0 0 2px 1px var(--background-tertiary);
+  background-color: var(--background-floating);
+
+  &::before {
+    border-top-color: var(--background-floating);
+  }
+}
+
+// ---------------------------- Messages ---------------------------- \\
+.mentioned-xhSam7 {
+  &::before {
+    background-color: var(--amethyst-brand);
+    box-shadow: 0 0 3.5px var(--amethyst-brand);
+  }
+}
+
+.replying-1x3H0T, // Message you're replying to
+.ephemeral-1PsL1r { // Clyde
+  background-color: rgba(var(--amethyst-cyan-rgb), 0.075);
+
+  &::before {
+    background-color: rgba(var(--amethyst-cyan-rgb), 0.35);
+    box-shadow: 0 0 3.5px var(--amethyst-cyan);
+  }
+} 
+
+.repliedMessage-VokQwo { // Reply preview above message
+  &::before {
+    border-color: var(--amethyst-brand);
+  }
+
+  > .replyBadge-r1su3o {
+    background-color: transparent;
+  }
+
+  .replyIcon-1b4Xjp {
+    width: 20px;
+    height: 10px;
+    color: var(--interactive-active);
+  }
+}
+
+// ---------------------------- Cards ---------------------------- \\
+#app-mount {
+  .tile-2OwFgW { // Nitro gift card
+    background-color: var(--background-secondary-alt);
+
+    .invalidPoop-pnUbq7 { // Gift link expired background
+      background-color: rgba(var(--amethyst-primary-rgb), 0.5);
+    }
+  }
+}
+
+.invite-18yqGF { // Spotify invite, game invite
+  @at-root #app-mount & {
+    border-color: var(--background-tertiary);
+    background-color: var(--background-secondary-alt);
+  }
+
+  @at-root .root-1gCeng & {
+    box-shadow: 0 0 5px 1px var(--background-secondary-alt);
+  }
+}
+
+.wrapper-35wsBm { // Guild invites
+  .guildIconImage-3qTk45 {
+    background-color: var(--background-primary);
+  }
+
+  .resolvingBackground-351jK_ {
+    background-image: linear-gradient(90deg,
+      var(--background-primary),
+      var(--channeltextarea-background),
+      var(--background-primary)
+    );
+  }
+}
+
+// ---------------------------- Chat bars ---------------------------- \\
+.messagesErrorBar-nyJGU7 { // Messages Failed To Load
+  background-color: rgba(var(--amethyst-red-rgb), 0.85) !important;
+}
+
+// ---------------------------- Spoilers ---------------------------- \\
+#app-mount {
+  .spoilerWarning-2aAZq1 { // Attachments
+    background-color: var(--background-tertiary);
+  }
+
+  .spoilerText-3p6IlD { // Messages
+    border-radius: 5px;
+
+    &.hidden-HHr2R9 {
+      transition: background-color 0.25s;
+      background-color: var(--background-secondary-alt);
+
+      &:hover {
+        background-color: var(--background-secondary);
+      }
+    }
+
+    &[aria-expanded="true"] {
+      background-color: var(--background-modifier-selected);
+    }
+  }
+}

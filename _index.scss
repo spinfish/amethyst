@@ -1,0 +1,77 @@
+/**
+ * MIT License
+ *
+ * Copyright (c) 2021 spinfish
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+@forward "theme";
+@forward "extras";
+
+$colours: (
+  "red": (255, 43, 0),
+  "orange": (255, 145, 0),
+  "cyan": (58, 195, 184),
+  "brand": (104, 47, 134),
+  "brand-hover": (99, 42, 130),
+  "brand-active": (86, 33, 115),
+  "primary": (113, 82, 119),
+  "primary-hover": (104, 79, 109),
+  "primary-active": (88, 65, 93)
+);
+
+.theme-dark,
+.theme-light {
+  --background-accent: rgb(35, 4, 49);
+  --background-primary: var(--background-accent);
+  --background-secondary: rgb(28, 0, 40);
+  --background-secondary-alt: rgb(22, 0, 33);
+  --background-floating:  var(--background-secondary-alt);
+  --background-tertiary: rgb(13, 0, 23);
+  --background-mentioned: rgba(104, 45, 145, 0.2);
+
+  --background-modifier-hover: rgba(var(--amethyst-primary-rgb), 0.16);
+  --background-modifier-active: rgba(var(--amethyst-primary-rgb), 0.24);
+  --background-modifier-selected: rgba(var(--amethyst-primary-rgb), 0.32);
+
+  --activity-card-background: var(--background-tertiary);
+  --channeltextarea-background: rgb(45, 15, 61);
+  --text-link: var(--amethyst-cyan);
+
+  --brand-experiment: var(--amethyst-brand);
+  --brand-experiment-500: var(--amethyst-brand);
+  --control-brand-foreground: var(--amethyst-primary);
+  --font-display: var(--font-family) !important; // Sorry katlyn
+
+  @each $colour-name, $colour-rgb in $colours {
+    --amethyst-#{$colour-name}: rgb(#{$colour-rgb});
+    --amethyst-#{$colour-name}-rgb: #{$colour-rgb};
+  }
+
+  $number: 10;
+  @while $number < 96 {
+    --brand-experiment-#{$number}a: rgba(var(--amethyst-brand-rgb), #{$number * 0.01});
+    $number: $number + 5;
+  }
+
+  // I know this is the pinnacle of laziness but I'll only do the
+  // brand-experiment-100s if somebody else complains about it because
+  // just the idea of having to do it causes me pain
+}

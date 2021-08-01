@@ -1,0 +1,172 @@
+// ---------------------------- Generic ---------------------------- \\
+#app-mount,
+.theme-light {
+  .root-1gCeng,
+  .modal-yWgWj- {
+    box-shadow: 0 0 0 1px black;
+    background-color: var(--background-secondary);
+
+    .footer-2gL1pp,
+    .message-2qRu38 {
+      box-shadow: inherit;
+      background-color: var(--background-secondary-alt);
+    }
+  }
+
+  .separator-2-RRj_ {
+    box-shadow: 0 1px 0 0 var(--background-tertiary), 0 1px 2px 0 black;
+  }
+}
+
+#app-mount {
+  // ---------------------------- Reactions ---------------------------- \\
+  .scroller-1-nKid {
+    background-color: var(--background-secondary);
+
+    > .reactionSelected-1pqISm {
+      background-color: var(--background-modifier-selected);
+    }
+
+    + .reactors-Blmlhw {
+      background-color: var(--background-primary);
+
+      .reactorDefault-1IUqMZ {
+        box-shadow: inset 0 -1px 0 var(--background-secondary-alt);
+      }
+    }
+  }
+
+  // ---------------------------- Keyboard shortcuts ---------------------------- \\
+  .keyboardShortcutsModal-3piNz7 {
+    background-color: var(--background-primary);
+  }
+
+  // ---------------------------- Upload modal ---------------------------- \\
+  .uploadModal-2ifh8j {
+    box-shadow: 0 0 2px 2px var(--background-tertiary);
+    background-color: var(--background-secondary);
+
+    > .footer-3mqk7D {
+      box-shadow: none;
+      background-color: var(--background-secondary-alt);
+    }
+
+    .icon-kyxXVr {
+      &:not(.image-2yrs5j) {
+        filter: invert(0.925); // Thanks D Mack#4481!
+      }
+    }
+  }
+}
+
+// ---------------------------- Accept invite ---------------------------- \\
+.container-2Yth53 {
+  > .contentWrapper-3WC1ID {
+    background-color: var(--background-primary);
+  }
+}
+
+// ---------------------------- Streaming ---------------------------- \\
+.qualitySettingsContainer-1gOtRJ {
+  border-color: var(--background-tertiary);
+
+  .item-3T2z1R {
+    border-color: var(--background-tertiary);
+  }
+}
+
+// ---------------------------- VC feedback ---------------------------- \\
+.emoji-1N-wHh {
+  &.emojiSad-1iG7c0 {
+    background-image: url("/assets/08b9e24092ee146b9e071e89049c1055.svg");
+  }
+
+  &.emojiNeutral-1AAukj {
+    background-image: url("/assets/fc5c8aa09047ef94d2c380891feff0f4.svg");
+  }
+
+  &.emojiHappy-1umapU {
+    background-image: url("/assets/626aaed496ac12bbdb68a86b46871a1f.svg");
+  }
+}
+
+// ---------------------------- User modal ---------------------------- \\
+.topSection-y3p-_D {
+  .banner-2QYc2d {
+    background-color: inherit !important;
+
+    &:not(.bannerPremium-2hSAwz) {
+      height: 80px; // Remove huge empty space above avatar in non-custom banner profiles
+    }
+  }
+}
+
+// ---------------------------- Quickswitcher ---------------------------- \\
+.quickswitcher-3JagVE {
+  > .input-2VB9rf {
+    border: 1px solid var(--background-tertiary);
+    background-color: var(--channeltextarea-background);
+  }
+
+  // Mimic discord's mention badge
+  .badge-36LyGI {
+    width: 16px !important;
+    padding: inherit;
+    margin-left: 1px;
+    border-radius: 8px;
+    line-height: 16px;
+    font-weight: 600;
+    text-align: center;
+    background-color: var(--amethyst-red);
+  }
+}
+
+.connectedAccount-2Jb-Z0 {
+  border-color: var(--background-tertiary);
+
+  &:hover {
+    background-color: var(--background-modifier-hover);
+  }
+
+  .flowerStar-1GeTsn {
+    > path {
+      fill: var(--amethyst-brand);
+    }
+  }
+}
+
+// ---------------------------- Add/join server ---------------------------- \\
+.theme-light {
+  .root-1gCeng {
+    --text-normal: white;
+    --header-secondary: rgb(187, 180, 180);
+
+    h3 {
+      color: white;
+    }
+  }
+
+  .footerTitle-2CYZch {
+    margin-bottom: 20px;
+  }
+
+  .sizeMin-1mJd1x, // Back buttons
+  .sampleLink-2NLvZg { // Sample links
+    color: rgb(156, 140, 140);
+  }
+
+  .container-UC8Ug1 { // Template buttons
+    background-color: transparent;
+    border-color: var(--background-tertiary);
+
+    &:hover {
+      background-color: var(--background-primary);
+    }
+  }
+
+  .uploadIcon-2IFzZU {
+    circle {
+      fill: var(--amethyst-brand);
+    }
+  }
+}
