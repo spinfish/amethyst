@@ -4,10 +4,12 @@
 @import url("https://spinfish.github.io/css-snippets/snippets/filled-roles.css");
 @import url("https://spinfish.github.io/css-snippets/snippets/user-connections.css");
 @import url("https://spinfish.github.io/css-snippets/snippets/bsi-radialstatus-typing.css");
-.notice-2X5hT5 {
-  background-color: var(--amethyst-brand);
+.notice-3bPHh- {
   margin: 0 4px 4px 4px;
   border-radius: 10px;
+}
+.notice-3bPHh-.notice-2X5hT5 {
+  background-color: var(--amethyst-brand);
 }
 
 .thin-1ybCId::-webkit-scrollbar {
@@ -200,11 +202,7 @@
   fill: var(--amethyst-primary);
 }
 
-#app-mount .colorDefault-2K3EoJ:active {
-  color: white;
-  background-color: var(--amethyst-brand-hover);
-}
-#app-mount .colorDefault-2K3EoJ.focused-3afm-j {
+#app-mount .colorDefault-2K3EoJ:active, #app-mount .colorDefault-2K3EoJ.focused-3afm-j {
   color: white;
   background-color: var(--amethyst-brand-hover);
 }
@@ -257,24 +255,25 @@
 .callContainer-36WRfH .tile-2naSqK {
   background-color: var(--background-primary);
 }
-.callContainer-36WRfH .colorable-1bkp8v {
+
+.videoControls-24w7Xp .colorable-1bkp8v {
   background-color: var(--call-button-normal);
 }
-.callContainer-36WRfH .colorable-1bkp8v:hover, .callContainer-36WRfH .colorable-1bkp8v.active-1QRrIS {
+.videoControls-24w7Xp .colorable-1bkp8v:hover, .videoControls-24w7Xp .colorable-1bkp8v.active-1QRrIS {
   background-color: var(--call-button-hover-active);
 }
-.callContainer-36WRfH .colorable-1bkp8v.primaryDark-3mSFDl {
+.videoControls-24w7Xp .colorable-1bkp8v.primaryDark-3mSFDl {
   --call-button-normal: var(--background-accent);
-  --call-button-hover-active: rgba(var(--amethyst-brand-hover-rgb), 0.5);
+  --call-button-hover-active: var(--background-secondary);
 }
-.callContainer-36WRfH .colorable-1bkp8v.white-3GPOIp {
+.videoControls-24w7Xp .colorable-1bkp8v.white-3GPOIp {
   --call-button-normal: var(--amethyst-brand);
   --call-button-hover-active: var(--amethyst-brand-hover);
 }
-.callContainer-36WRfH .colorable-1bkp8v.white-3GPOIp path {
+.videoControls-24w7Xp .colorable-1bkp8v.white-3GPOIp path {
   color: white;
 }
-.callContainer-36WRfH .colorable-1bkp8v.red-33-Lnk {
+.videoControls-24w7Xp .colorable-1bkp8v.red-33-Lnk {
   --call-button-normal: var(--amethyst-red);
   --call-button-hover-active: red;
 }
@@ -293,6 +292,10 @@
 }
 .toolbar-2bjZV7::before {
   border-top-color: var(--background-floating);
+}
+
+.spine--Wla_O {
+  color: var(--channeltextarea-background);
 }
 
 .mentioned-xhSam7::before {
@@ -351,6 +354,15 @@
 
 .messagesErrorBar-nyJGU7 {
   background-color: rgba(var(--amethyst-red-rgb), 0.85) !important;
+}
+
+#---new-messages-bar {
+  --divider-color: var(--amethyst-brand);
+  border-width: 3px;
+}
+#---new-messages-bar > .unreadPill-2HyYtt {
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
 }
 
 #app-mount .spoilerWarning-2aAZq1 {
@@ -449,11 +461,14 @@
   background-image: url("/assets/626aaed496ac12bbdb68a86b46871a1f.svg");
 }
 
-.topSection-y3p-_D .banner-2QYc2d {
+.root-3QyAh1 .banner-2QYc2d {
   background-color: inherit !important;
 }
-.topSection-y3p-_D .banner-2QYc2d:not(.bannerPremium-2hSAwz) {
+.root-3QyAh1 .banner-2QYc2d:not(.bannerPremium-2hSAwz) {
   height: 80px;
+}
+.root-3QyAh1 .user-details {
+  margin-top: 18px;
 }
 
 .quickswitcher-3JagVE > .input-2VB9rf {
@@ -532,6 +547,10 @@
 #app-mount .itemCard-v9viV7.active-1xchHY {
   background-color: var(--background-modifier-selected);
 }
+#app-mount .itemCard-v9viV7 .inset-3sAvek,
+#app-mount .itemCard-v9viV7 .separator-XqIyoz {
+  background-color: inherit;
+}
 #app-mount .pageWrapper-1PgVDX {
   background-color: var(--background-accent);
 }
@@ -573,6 +592,24 @@
 
 .userPopout-xaxa6l .popoutBanner-19WKGg {
   background-color: inherit !important;
+}
+
+.textarea-2r0oV8 {
+  border-radius: 8px;
+  padding: 5px;
+  background-color: var(--background-secondary-alt);
+}
+.textarea-2r0oV8:focus {
+  background-color: rgba(var(--amethyst-primary-rgb), 0.05);
+}
+.note-1oo11U > .textarea-2r0oV8 {
+  margin-bottom: 5px;
+}
+.note-1oo11U > .textarea-2r0oV8:empty {
+  height: 27px !important;
+}
+.note-1oo11U > .textarea-2r0oV8:not(:empty) {
+  margin-bottom: 10px;
 }
 
 .container-3XJ8ns {

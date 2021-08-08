@@ -91,13 +91,17 @@
 }
 
 // ---------------------------- User modal ---------------------------- \\
-.topSection-y3p-_D {
-  .banner-2QYc2d {
+.root-3QyAh1 {
+  .banner-2QYc2d { // Banner
     background-color: inherit !important;
 
     &:not(.bannerPremium-2hSAwz) {
       height: 80px; // Remove huge empty space above avatar in non-custom banner profiles
     }
+  }
+
+  .user-details { // Fix it being right under user notes
+    margin-top: 18px;
   }
 }
 

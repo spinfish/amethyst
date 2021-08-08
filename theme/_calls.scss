@@ -24,7 +24,9 @@
   .tile-2naSqK { // No one else is here yet...
     background-color: var(--background-primary);
   }
+}
 
+.videoControls-24w7Xp { // Did this so it works for stage containers too
   .colorable-1bkp8v { // Call buttons
     background-color: var(--call-button-normal);
 
@@ -34,7 +36,7 @@
     }
 
     &.primaryDark-3mSFDl { // Camera and Share Your screen
-      @include call-button(var(--background-accent), rgba(var(--amethyst-brand-hover-rgb), 0.5));
+      @include call-button(var(--background-accent), var(--background-secondary));
     }
 
     &.white-3GPOIp { // Mute/unmute

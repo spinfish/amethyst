@@ -8,6 +8,11 @@
   }
 }
 
+// ---------------------------- Channels sidebar ---------------------------- \\
+.spine--Wla_O { // Thread marker
+  color: var(--channeltextarea-background);
+}
+
 // ---------------------------- Messages ---------------------------- \\
 .mentioned-xhSam7 {
   &::before {
@@ -81,6 +86,15 @@
 // ---------------------------- Chat bars ---------------------------- \\
 .messagesErrorBar-nyJGU7 { // Messages Failed To Load
   background-color: rgba(var(--amethyst-red-rgb), 0.85) !important;
+}
+
+#---new-messages-bar { // New messages bar
+  --divider-color: var(--amethyst-brand); // Or red?
+  border-width: 3px;
+
+  > .unreadPill-2HyYtt {
+    transform: translateY(-1px);
+  }
 }
 
 // ---------------------------- Spoilers ---------------------------- \\

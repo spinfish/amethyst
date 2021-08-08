@@ -1,3 +1,15 @@
+@mixin filled-button($color) {
+  background-color: var(--amethyst-#{$color});
+
+  &:hover {
+    background-color: var(--amethyst-#{$color}-hover);
+  }
+
+  &:active {
+    background-color: var(--amethyst-#{$color}-active);
+  }
+}
+
 // ---------------------------- Checkbox ---------------------------- \\
 .checked-3_4uQ9 {
   path {
@@ -8,13 +20,7 @@
 #app-mount {
   // ---------------------------- Popout buttons ---------------------------- \\
   .colorDefault-2K3EoJ {
-    &:active {
-      // &:not(.hideInteraction-1iHO1O) {
-      color: white;
-      background-color: var(--amethyst-brand-hover);
-      // }
-    }
-
+    &:active, // &:not(.hideInteraction-1iHO1O)
     &.focused-3afm-j {
       color: white;
       background-color: var(--amethyst-brand-hover);
@@ -28,28 +34,12 @@
   // ---------------------------- Filled buttons ---------------------------- \\
   .lookFilled-1Gx00P {
     &.colorBrand-3pXr91 {
-      background-color: var(--amethyst-brand);
-
-      &:hover {
-        background-color: var(--amethyst-brand-hover);
-      }
-
-      &:active {
-        background-color: var(--amethyst-brand-active);
-      }
+      @include filled-button("brand");
     }
 
     &.colorGrey-2DXtkV,
     &.colorPrimary-3b3xI6 {
-      background-color: var(--amethyst-primary);
-
-      &:hover {
-        background-color: var(--amethyst-primary-hover);
-      }
-
-      &:active {
-        background-color: var(--amethyst-primary-active);
-      }
+      @include filled-button("primary");
     }
   }
 }
