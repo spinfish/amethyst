@@ -15,6 +15,13 @@ git clone https://github.com/spinfish/amethyst
 
 ![Git Bash](https://media.discordapp.net/attachments/678012423067926539/835658793253470308/git_bash_here.png)
 
+#### BetterDiscord
+For a direct download, click [here](https://betterdiscord.app/Download?id=422). If you don't want that, do the following:
+
+- Click [here](https://betterdiscord.app/theme/Amethyst)
+- Press the big blue `Download` button
+- Drag and drop the file into your `Themes` folder
+
 ## Acknowledgements
 Huge thanks to **[Maya](https://github.com/XuaTheGrate)** and Equity for the original theme idea and variables, and to **[Daggy](https://github.com/Daggy1234)** for giving me the permission to take the theme's concept as my own. Also, thank you to the following people for their wonderful extras:
 
