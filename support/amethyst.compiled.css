@@ -4,11 +4,11 @@
 @import url("https://spinfish.github.io/css-snippets/snippets/filled-roles.css");
 @import url("https://spinfish.github.io/css-snippets/snippets/user-connections.css");
 @import url("https://spinfish.github.io/css-snippets/snippets/bsi-radialstatus-typing.css");
-.notice-3bPHh- {
+#app-mount .notice-3bPHh- {
   margin: 0 4px 4px 4px;
   border-radius: 10px;
 }
-.notice-3bPHh-.notice-2X5hT5 {
+#app-mount .notice-3bPHh-.notice-2X5hT5 {
   background-color: var(--amethyst-brand);
 }
 
@@ -544,7 +544,8 @@
 .connectedAccount-2Jb-Z0:hover {
   background-color: var(--background-modifier-hover);
 }
-.connectedAccount-2Jb-Z0 .flowerStar-1GeTsn > path {
+
+.connectedAccountVerifiedIcon-2cA82O > .flowerStar-1GeTsn > path {
   fill: var(--amethyst-brand);
 }
 
@@ -575,8 +576,7 @@
 
 .tier1-1ttHRY.banner-3Kac2g {
   border-radius: 8px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#a764ed), to(#e292aa));
-  background-image: linear-gradient(to right, #a764ed, #e292aa);
+  background-image: var(--amethyst-nitro-gradient);
 }
 
 #stage-discovery-tab .container-S9SaVf {
@@ -631,6 +631,15 @@
 #app-mount .tierHeaderLocked-3S508x {
   background-color: var(--background-secondary);
 }
+#app-mount .tierHeaderUnlocked-1n-OTI,
+#app-mount .tierHeaderUnlocked-3lTDnP {
+  background: var(--background-secondary-alt);
+}
+#app-mount .tierUnlocked-25K6Kv,
+#app-mount .tierUnlocked-2H6ULo {
+  color: white;
+  background: var(--amethyst-nitro-gradient);
+}
 #app-mount .tierBody-16Chc9,
 #app-mount .tierBody-3aUxuc {
   background-color: var(--background-tertiary);
@@ -641,27 +650,33 @@
 #app-mount .backgroundRed-2jrPZy {
   background-color: rgba(var(--amethyst-red-rgb), 0.8);
 }
+#app-mount .wrapper-3nSjSv {
+  background: var(--amethyst-nitro-gradient);
+}
 
 .userPopout-xaxa6l .popoutBanner-19WKGg {
   background-color: inherit !important;
 }
 
+.note-1oo11U {
+  margin-bottom: 11px;
+}
+
 .textarea-2r0oV8 {
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
   border-radius: 8px;
-  padding: 5px;
   background-color: var(--background-secondary-alt);
+}
+.textarea-2r0oV8:empty {
+  height: 22.5px !important;
 }
 .textarea-2r0oV8:focus {
   background-color: rgba(var(--amethyst-primary-rgb), 0.05);
 }
-.note-1oo11U > .textarea-2r0oV8 {
-  margin-bottom: 5px;
-}
-.note-1oo11U > .textarea-2r0oV8:empty {
-  height: 27px !important;
-}
-.note-1oo11U > .textarea-2r0oV8:not(:empty) {
-  margin-bottom: 10px;
+.textarea-2r0oV8::-webkit-scrollbar-thumb {
+  background-color: var(--background-modifier-hover);
 }
 
 .container-3XJ8ns {
@@ -1069,6 +1084,7 @@
   --brand-experiment-500: var(--amethyst-brand);
   --control-brand-foreground: var(--amethyst-primary);
   --font-display: var(--font-family) !important;
+  --amethyst-nitro-gradient: linear-gradient(to right, rgb(167, 100, 237), rgb(226, 146, 170));
   --amethyst-red: rgb(255, 43, 0);
   --amethyst-red-rgb: 255, 43, 0;
   --amethyst-orange: rgb(255, 145, 0);

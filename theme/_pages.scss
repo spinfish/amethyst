@@ -2,7 +2,7 @@
 .tier1-1ttHRY {
   &.banner-3Kac2g {
     border-radius: 8px;
-    background-image: linear-gradient(to right, rgb(167, 100, 237), rgb(226, 146, 170));
+    background-image: var(--amethyst-nitro-gradient);
   }
 }
 
@@ -86,6 +86,17 @@
     background-color: var(--background-secondary);
   }
 
+  .tierHeaderUnlocked-1n-OTI,
+  .tierHeaderUnlocked-3lTDnP {
+    background: var(--background-secondary-alt);
+  }
+
+  .tierUnlocked-25K6Kv,
+  .tierUnlocked-2H6ULo {
+    color: white;
+    background: var(--amethyst-nitro-gradient);
+  }
+
   .tierBody-16Chc9,
   .tierBody-3aUxuc {
     background-color: var(--background-tertiary);
@@ -97,5 +108,9 @@
 
   .backgroundRed-2jrPZy { // Error popup on server boost
     background-color: rgba(var(--amethyst-red-rgb), 0.8);
+  }
+
+  .wrapper-3nSjSv {
+    background: var(--amethyst-nitro-gradient);  
   }
 }

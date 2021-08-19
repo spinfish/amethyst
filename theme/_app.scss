@@ -2,23 +2,25 @@ $-container-margin: 4px;
 $-container-radius: 10px;
 
 // ---------------------------- Notices ---------------------------- \\
-.notice-3bPHh- {
-  margin: 0 $-container-margin $-container-margin $-container-margin; // Yes
-  border-radius: $-container-radius;
+#app-mount { // Override #pluginNotice
+  .notice-3bPHh- {
+    margin: 0 $-container-margin $-container-margin $-container-margin; // Yes
+    border-radius: $-container-radius;
 
-  &.notice-2X5hT5 {
-    background-color: var(--amethyst-brand);
+    &.notice-2X5hT5 {
+      background-color: var(--amethyst-brand);
+    }
+
+    // &.colorBrand-2zeG8h {}
+
+    // &.colorDefault-22HBa0 {
+    //   background-color: var(--amethyst-orange);
+    // }
+
+    // &.colorSuccess-1hnbW2 {
+    //   background-color: var(--amethyst-cyan);
+    // }
   }
-
-  // &.colorBrand-2zeG8h {}
-
-  // &.colorDefault-22HBa0 {
-  //   background-color: var(--amethyst-orange);
-  // }
-
-  // &.colorSuccess-1hnbW2 {
-  //   background-color: var(--amethyst-cyan);
-  // }
 }
 
 // ---------------------------- Top bar ---------------------------- \\

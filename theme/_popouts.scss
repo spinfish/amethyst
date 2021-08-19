@@ -5,28 +5,28 @@
   }
 }
 
-.textarea-2r0oV8 { // User notes
+.note-1oo11U { // User notes
+  margin-bottom: 11px;
+}
+
+.textarea-2r0oV8 {
   // The following applies to user modals as \\
   // well but wasn't sure where else to put it \\
 
+  height: fit-content !important;
   border-radius: 8px;
-  padding: 5px;
   background-color: var(--background-secondary-alt);
+
+  &:empty {
+    height: 22.5px !important; // I don't know :sob:
+  }
 
   &:focus {
     background-color: rgba(var(--amethyst-primary-rgb), 0.05);
   }
 
-  @at-root .note-1oo11U > & { // Make sure it doesn't apply to user modal
-    margin-bottom: 5px;
-
-    &:empty {
-      height: 27px !important;
-    }
-
-    &:not(:empty) {
-      margin-bottom: 10px;
-    }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--background-modifier-hover);
   }
 }
 

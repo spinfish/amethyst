@@ -60,6 +60,8 @@ $colours: (
   --control-brand-foreground: var(--amethyst-primary);
   --font-display: var(--font-family) !important; // Sorry katlyn
 
+  --amethyst-nitro-gradient: linear-gradient(to right, rgb(167, 100, 237), rgb(226, 146, 170));
+
   @each $colour-name, $colour-rgb in $colours {
     --amethyst-#{$colour-name}: rgb(#{$colour-rgb});
     --amethyst-#{$colour-name}-rgb: #{$colour-rgb};
