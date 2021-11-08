@@ -1,9 +1,10 @@
-@import url("https://nyri4.github.io/Discolored/main.css");
-@import url("https://mr-miner1.github.io/Better-Badges/src/compiled.css");
-@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/components/wordmark.css");
-@import url("https://spinfish.github.io/css-snippets/snippets/filled-roles.css");
-@import url("https://spinfish.github.io/css-snippets/snippets/user-connections.css");
-@import url("https://spinfish.github.io/css-snippets/snippets/bsi-radialstatus-typing.css");
+@import "https://nyri4.github.io/Discolored/main.css";
+@import "https://mr-miner1.github.io/Better-Badges/BetterBadges(BD).theme.css";
+@import "https://Goose-Nest.github.io/GT-RevertRebrand/src/components/wordmark.css";
+@import "https://CreArts-Community.github.io/Context-Icons/context-icons.theme.css";
+@import "https://spinfish.github.io/css-snippets/snippets/filled-roles.css";
+@import "https://spinfish.github.io/css-snippets/snippets/user-connections.css";
+@import "https://spinfish.github.io/css-snippets/snippets/bsi-radialstatus-typing.css";
 #app-mount .notice-3bPHh- {
   margin: 0 4px 4px 4px;
   border-radius: 10px;
@@ -75,6 +76,7 @@
   margin-top: 4px;
 }
 .panels-j1Uci_ .container-1giJp5,
+.panels-j1Uci_ > .listeningAlong-30wH70,
 .panels-j1Uci_ > .activityPanel-28dQGo {
   border-bottom: none;
 }
@@ -130,6 +132,21 @@
 }
 .sidebar-2K8pFh .header-2V-4Sw + .animatedContainer-1NSq4T {
   border-top-right-radius: 10px;
+}
+.sidebar-2K8pFh .container-3fNISf {
+  background: var(--background-secondary-alt);
+  padding: 10px;
+  margin-top: -5px;
+  margin-right: 2px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.sidebar-2K8pFh .container-3fNISf > .progressBarContainer-DLPbha {
+  background: var(--background-primary);
+  margin-bottom: 3px;
+}
+.sidebar-2K8pFh .container-3fNISf .divider-3C88Um {
+  display: none;
 }
 
 .members-1998pB {
@@ -257,13 +274,13 @@
 #app-mount .colorDanger-2qLCe1 {
   --amethyst-brand-hover: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
 }
-#app-mount .lookFilled-1Gx00P.colorBrand-3pXr91 {
+#app-mount .lookFilled-1Gx00P.colorBrand-3pXr91, #app-mount .lookFilled-1Gx00P.colorBrandNew-g5lmBU {
   background-color: var(--amethyst-brand);
 }
-#app-mount .lookFilled-1Gx00P.colorBrand-3pXr91:hover {
+#app-mount .lookFilled-1Gx00P.colorBrand-3pXr91:hover, #app-mount .lookFilled-1Gx00P.colorBrandNew-g5lmBU:hover {
   background-color: var(--amethyst-brand-hover);
 }
-#app-mount .lookFilled-1Gx00P.colorBrand-3pXr91:active {
+#app-mount .lookFilled-1Gx00P.colorBrand-3pXr91:active, #app-mount .lookFilled-1Gx00P.colorBrandNew-g5lmBU:active {
   background-color: var(--amethyst-brand-active);
 }
 #app-mount .lookFilled-1Gx00P.colorGrey-2DXtkV, #app-mount .lookFilled-1Gx00P.colorPrimary-3b3xI6 {
@@ -459,6 +476,10 @@
 .theme-light .separator-2-RRj_ {
   -webkit-box-shadow: 0 1px 0 0 var(--background-tertiary), 0 1px 2px 0 black;
           box-shadow: 0 1px 0 0 var(--background-tertiary), 0 1px 2px 0 black;
+}
+#app-mount .navRow-3bgpKd,
+.theme-light .navRow-3bgpKd {
+  background-color: var(--background-secondary);
 }
 
 #app-mount .scroller-1-nKid {
@@ -733,6 +754,13 @@
   background-color: var(--background-secondary);
 }
 
+.container-2R1ffg {
+  background-color: var(--brand-experiment);
+}
+.container-2R1ffg > .pointer-3Odm0y {
+  border-top-color: var(--brand-experiment);
+}
+
 .popoutLoadingForeground-2mZT61 {
   background-image: -webkit-gradient(linear, left top, right top, from(var(--background-primary)), color-stop(var(--background-secondary)), to(var(--background-primary)));
   background-image: linear-gradient(90deg, var(--background-primary), var(--background-secondary), var(--background-primary));
@@ -778,15 +806,15 @@
 #app-mount .container-3ayLPN .option-96V44q::after {
   background: transparent;
 }
-#app-mount .container-3ayLPN .option-96V44q.selected-rZcOL- {
-  background-color: var(--background-secondary-alt);
+#app-mount .container-3ayLPN .option-96V44q[aria-selected=true] {
+  background-color: var(--background-secondary-alt) !important;
 }
 #app-mount .searchAnswer-3Dz2-q,
 #app-mount .searchFilter-2ESiM3 {
   background-color: var(--background-accent);
 }
 #app-mount .react-datepicker {
-  background-color: inherit;
+  background: var(--background-secondary);
 }
 #app-mount .react-datepicker__navigation {
   border-color: var(--background-floating);
@@ -839,38 +867,38 @@
   background-color: var(--background-modifier-active);
 }
 
-.tutorialContainer-2sGCg9 {
+.tutorialContainer-11ICd5 {
   --background-primary: var(--channeltextarea-background);
 }
-.tutorialContainer-2sGCg9 .homeIcon-FuNwkv > path {
+.tutorialContainer-11ICd5 .homeIcon-AaowEC > path {
   d: path("M20.6644 20C20.6644 20 19.8014 18.9762 19.0822 18.0714C22.2226 17.1905 23.4212 15.2381 23.4212 15.2381C22.4384 15.881 21.5034 16.3334 20.6644 16.6429C19.4658 17.1429 18.3151 17.4762 17.1884 17.6667C14.887 18.0953 12.7774 17.9762 10.9795 17.6429C9.61301 17.381 8.43836 17 7.45548 16.6191C6.90411 16.4048 6.30479 16.1429 5.70548 15.8096C5.63356 15.7619 5.56164 15.7381 5.48973 15.6905C5.44178 15.6667 5.41781 15.6429 5.39384 15.6191C4.96233 15.381 4.7226 15.2143 4.7226 15.2143C4.7226 15.2143 5.87329 17.1191 8.91781 18.0238C8.19863 18.9286 7.31164 20 7.31164 20C2.0137 19.8333 0 16.381 0 16.381C0 8.7144 3.45205 2.50017 3.45205 2.50017C6.90411 -0.07123 10.1884 0.000197861 10.1884 0.000197861L10.4281 0.285909C6.11301 1.52399 4.12329 3.40493 4.12329 3.40493C4.12329 3.40493 4.65068 3.11921 5.53767 2.71446C8.10274 1.59542 10.1404 1.2859 10.9795 1.21447C11.1233 1.19066 11.2432 1.16685 11.387 1.16685C12.8493 0.976379 14.5034 0.92876 16.2295 1.11923C18.5068 1.38114 20.9521 2.0478 23.4452 3.40493C23.4452 3.40493 21.5514 1.61923 17.476 0.381146L17.8116 0.000197861C17.8116 0.000197861 21.0959 -0.07123 24.5479 2.50017C24.5479 2.50017 28 8.7144 28 16.381C28 16.381 25.9623 19.8333 20.6644 20ZM9.51712 8.88106C8.15068 8.88106 7.07192 10.0715 7.07192 11.5239C7.07192 12.9763 8.17466 14.1667 9.51712 14.1667C10.8836 14.1667 11.9623 12.9763 11.9623 11.5239C11.9863 10.0715 10.8836 8.88106 9.51712 8.88106ZM18.2671 8.88106C16.9007 8.88106 15.8219 10.0715 15.8219 11.5239C15.8219 12.9763 16.9247 14.1667 18.2671 14.1667C19.6336 14.1667 20.7123 12.9763 20.7123 11.5239C20.7123 10.0715 19.6336 8.88106 18.2671 8.88106Z");
 }
 
-.circleIconButton-1QV--U {
+.circleIconButton-hZmpE8 {
   background-color: var(--background-secondary-alt);
 }
 
-.folderIconWrapper-1_bOZe[style="background-color: rgba(88, 101, 242, 0.4);"] {
+.folderIconWrapper-1Ml_1q[style="background-color: rgba(88, 101, 242, 0.4);"] {
   background-color: rgba(var(--amethyst-brand-rgb), 0.4) !important;
 }
 
-.expandedFolderIconWrapper-Huv7rA {
+.expandedFolderIconWrapper-3fmTfW {
   background-color: var(--background-primary);
 }
-.expandedFolderIconWrapper-Huv7rA > svg[style="color: rgb(88, 101, 242);"] {
+.expandedFolderIconWrapper-3fmTfW > svg[style="color: rgb(88, 101, 242);"] {
   color: var(--amethyst-brand) !important;
 }
 
-.expandedFolderBackground-1cujaW:not(.collapsed-2ZrjoL) {
+.expandedFolderBackground-3ZDF05:not(.collapsed-2ZrjoL) {
   background-color: var(--background-primary);
   -webkit-box-shadow: 0 0 15px 5px var(--background-secondary-alt);
           box-shadow: 0 0 15px 5px var(--background-secondary-alt);
 }
 
-.tutorialContainer-30WoTp {
+.tutorialContainer-3alCZm {
   padding-top: 12.5px;
 }
-.tutorialContainer-30WoTp::before {
+.tutorialContainer-3alCZm::before {
   content: "";
   position: absolute;
   left: 20px;
@@ -879,6 +907,17 @@
   width: 32px;
   border-radius: 1px;
   background-color: var(--background-modifier-accent);
+}
+
+.container-3auIfb[style="opacity: 1; background-color: hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%);"] {
+  -webkit-transition: 250ms background-color ease-in;
+  transition: 250ms background-color ease-in;
+}
+.container-3auIfb:not([style="opacity: 1; background-color: hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%);"]) {
+  background-color: var(--brand-experiment) !important;
+}
+.container-3auIfb path:not([fill="hsl(218, calc(var(--saturation-factor, 1) * 4.6%), 46.9%)"]) {
+  fill: var(--brand-experiment);
 }
 
 .css-gvi9bl-control {
@@ -892,18 +931,24 @@
           box-shadow: var(--elevation-low);
 }
 
-#app-mount .auditLog-3jNbM6 {
+#app-mount .addGamePopout-2RY8Ju {
+  background-color: var(--background-secondary);
+  -webkit-box-shadow: 0 0 0 1px var(--background-tertiary), var(--elevation-low);
+          box-shadow: 0 0 0 1px var(--background-tertiary), var(--elevation-low);
+}
+
+#app-mount .auditLog-2ph_aK {
   border-color: var(--background-tertiary);
 }
 
-.auditLog-3jNbM6 > .header-GwIGlr {
+.auditLog-2ph_aK > .header-1oWRg0 {
   background-color: var(--background-secondary);
 }
-.auditLog-3jNbM6 > .divider-1pnAR2 {
+.auditLog-2ph_aK > .divider-1tf9AP {
   background-color: var(--background-tertiary);
 }
-.auditLog-3jNbM6 > .headerExpanded-CUEwZ5,
-.auditLog-3jNbM6 > .changeDetails-bk98pu {
+.auditLog-2ph_aK > .headerExpanded-2egR38,
+.auditLog-2ph_aK > .changeDetails-2dV5gP {
   background-color: transparent;
 }
 
@@ -936,6 +981,12 @@
           box-shadow: 0 0 2.5px 0.15px var(--background-tertiary);
   background-color: var(--background-secondary-alt);
 }
+#app-mount .card-3AyPWq .gemIndicatorContainer-2jdECl {
+  background-color: var(--background-floating);
+}
+#app-mount .card-3AyPWq .circleBackgroundAlt-Eohdst {
+  fill: var(--background-tertiary);
+}
 #app-mount .button-2CgfFz {
   -webkit-box-shadow: 0 0 0 1px var(--background-tertiary);
           box-shadow: 0 0 0 1px var(--background-tertiary);
@@ -944,6 +995,10 @@
 #app-mount .userSettingsVoice-iwdUCU .previewOverlay-2O7_KC {
   background-color: var(--background-secondary);
   border-color: var(--background-tertiary);
+}
+#app-mount .userSettingsVoice-iwdUCU .backgroundOptionSelected-33AYZn {
+  border-color: var(--brand-experiment);
+  background-color: var(--background-tertiary);
 }
 #app-mount .colorPickerCustom-2CWBn2 {
   border-color: var(--background-tertiary);
@@ -1045,7 +1100,7 @@
 /**
  * MIT License
  *
- * Copyright (c) 2021 spinfish
+ * Copyright (c) 2021-present spinfish
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -1074,6 +1129,8 @@
   --background-floating: var(--background-secondary-alt);
   --background-tertiary: rgb(13, 0, 23);
   --background-mentioned: rgba(104, 45, 145, 0.2);
+  --background-mobile-primary: var(--background-primary);
+  --background-mobile-secondary: var(--background-secondary);
   --background-modifier-hover: rgba(var(--amethyst-primary-rgb), 0.16);
   --background-modifier-active: rgba(var(--amethyst-primary-rgb), 0.24);
   --background-modifier-selected: rgba(var(--amethyst-primary-rgb), 0.32);

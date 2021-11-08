@@ -28,6 +28,7 @@ Huge thanks to **[Maya](https://github.com/XuaTheGrate)** and Equity for the ori
 - **[NYRI4](https://github.com/NYRI4)** for [Discolored](https://github.com/NYRI4/Discolored)
 - **[mr-miner1](https://github.com/mr-miner1)** for [Better Badges](https://github.com/mr-miner1/Better-Badges)
 - **[Goose-Nest](https://github.com/Goose-Nest/)** for [RevertRebrand](https://github.com/Goose-Nest/GT-RevertRebrand)
+- **[CreArts Community](https://github.com/CreArts-Community)** for [Context Icons](https://github.com/CreArts-Community/Context-Icons)
 
 ## Extra previews
 

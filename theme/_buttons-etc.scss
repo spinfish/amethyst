@@ -33,7 +33,8 @@
 
   // ---------------------------- Filled buttons ---------------------------- \\
   .lookFilled-1Gx00P {
-    &.colorBrand-3pXr91 {
+    &.colorBrand-3pXr91,
+    &.colorBrandNew-g5lmBU {
       @include filled-button("brand");
     }
 

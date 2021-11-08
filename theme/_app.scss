@@ -13,6 +13,10 @@ $-container-radius: 10px;
 
     // &.colorBrand-2zeG8h {}
 
+    // &.colorDanger-4gmAY0 {
+    //   background-color: var(--amethyst-red);  
+    // }
+
     // &.colorDefault-22HBa0 {
     //   background-color: var(--amethyst-orange);
     // }
@@ -101,6 +105,7 @@ $-container-radius: 10px;
   }
 
   .container-1giJp5,
+  > .listeningAlong-30wH70,
   > .activityPanel-28dQGo { // VC box -> currently playing game
     border-bottom: none;
   }
@@ -177,6 +182,24 @@ $-container-radius: 10px;
 
     + .animatedContainer-1NSq4T { // Fix banner having squared corner
       border-top-right-radius: $-container-radius;
+    }
+  }
+
+  .container-3fNISf { // Boost progress bar
+    background: var(--background-secondary-alt);
+    padding: $-container-margin * 2 + $-container-margin / 2;
+    margin-top: $-container-margin * -1 - 1px;
+    margin-right: $-container-margin / 2;
+    margin-bottom: $-container-margin * 2 + $-container-margin / 2;
+    border-radius: $-container-radius;
+  
+    > .progressBarContainer-DLPbha {
+      background: var(--background-primary);
+      margin-bottom: $-container-margin - 1px;
+    }
+
+    .divider-3C88Um {
+      display: none;
     }
   }
 }
