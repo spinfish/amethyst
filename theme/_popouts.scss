@@ -36,6 +36,13 @@
   border-color: var(--background-tertiary);
 }
 
+// ---------------------------- Inbox, Pinned Messages ---------------------------- \\
+.messagesPopoutWrap-1MQ1bW {
+  max-height: 600px !important;
+  width: fit-content;
+  max-width: 480px;
+}
+
 // ---------------------------- Member list role tooltip ---------------------------- \\
 #app-mount {
   .overflowRolesPopout-140n9i {
@@ -258,5 +265,10 @@
     &:active {
       background-color: var(--background-modifier-active);
     }
+  }
+
+  // ---------------------------- Add friend to DM ---------------------------- \\
+  .friendSelected-1sa4bG {
+    background-color :var(--background-accent);
   }
 }

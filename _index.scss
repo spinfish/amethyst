@@ -28,6 +28,7 @@
 $colours: (
   "red": (255, 43, 0),
   "orange": (255, 145, 0),
+  "green": (40, 193, 104),
   "cyan": (58, 195, 184),
   "brand": (104, 47, 134),
   "brand-hover": (99, 42, 130),
@@ -63,7 +64,10 @@ $colours: (
   --control-brand-foreground: var(--amethyst-primary);
   --font-display: var(--font-family) !important; // Sorry katlyn
 
-  --amethyst-nitro-gradient: linear-gradient(to right, rgb(167, 100, 237), rgb(226, 146, 170));
+  --amethyst-padding: 4px;
+  --amethyst-margin: 4px;
+  --amethyst-radius: 10px;
+  --amethyst-nitro-gradient-colours: rgb(167, 100, 237), rgb(226, 146, 170);
 
   @each $colour-name, $colour-rgb in $colours {
     --amethyst-#{$colour-name}: rgb(#{$colour-rgb});

@@ -3,6 +3,20 @@ A calm, deep purple theme for Discord heavily inspired by [the Purplous Discord 
 
 ![Main Preview](https://github.com/spinfish/images/blob/master/amethyst/preview_1.png)
 
+### Customizable margins and rounded corners
+As of v1.3.0, you can now customize Amethyst's spacing and corner roundness properties! Simply head over to your Quick CSS, paste the following CSS into it, then adjust each of the `VALUE`s to your likings:
+
+```css
+:root {
+  --amethyst-margin: `VALUE`px; /* Default spacing: 4px */
+  --amethyst-radius: `VALUE`px; /* Default roundness: 10px */
+}
+```
+
+Here's what Amethyst looks like with the margin property set to `8px` and the radius property to `0px`:
+
+![Amethyst but with 8px margin and 0px radius](https://github.com/spinfish/images/blob/master/amethyst/preview_margin_8px_radius_0px.png)
+
 ## Installation
 #### Powercord
 - Navigate to your `powercord` folder

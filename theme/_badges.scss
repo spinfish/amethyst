@@ -19,7 +19,7 @@
 
 .textBadge-1iylP6 {
   // Red badges e.g. LIVE
-  &[style*="359"] {
+  &[style*="359"] { // hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%)
     background-color: var(--amethyst-brand) !important;
   }
 

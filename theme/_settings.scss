@@ -11,7 +11,7 @@ $disabled-switch-item-style: "opacity: 1; background-color: #{$disabled-switch-i
 // ---------------------------- Switch item ---------------------------- \\
 .container-3auIfb {
   &[style="#{$disabled-switch-item-style}"] {
-    transition: 250ms background-color ease-in;
+    transition: 100ms background-color ease-in;
   }
 
   &:not([style="#{$disabled-switch-item-style}"]) {
@@ -190,18 +190,28 @@ $disabled-switch-item-style: "opacity: 1; background-color: #{$disabled-switch-i
 
 // ---------------------------- Channel permissions  ---------------------------- \\
 .item-1yAxl1 { // Checkboxes
+  color: var(--colour);
+
   &:not(.selected-2YhbGh) {
     cursor: pointer;
   }
 
-  &.passthrough-1c2ewQ {
-    color: var(--amethyst-orange);
-
-    &.selected-2YhbGh {
-      color: unset;
-      background-color: var(--amethyst-orange);
-    }
+  &.selected-2YhbGh {
+    color: white;
+    background-color: var(--colour);
   }
+}
+
+.deny-3nAuT6 {
+  --colour: var(--amethyst-red);
+}
+
+.passthrough-1c2ewQ {
+  --colour: var(--amethyst-orange);
+}
+
+.allow-1PzSY3 {
+  --colour: var(--amethyst-green);
 }
 
 .container-VSDcQc { // Add Role or Member
@@ -235,6 +245,18 @@ $disabled-switch-item-style: "opacity: 1; background-color: #{$disabled-switch-i
 // ---------------------------- Careful - you have unsaved changes! ---------------------------- \\
 .elevationHigh-1PneE4 {
   background-color: var(--background-tertiary) !important;
+}
+
+// ---------------------------- Sticker upload button ---------------------------- \\
+.iconWrapper-11Wvjn {
+  background: linear-gradient(90deg, var(--amethyst-nitro-gradient-colours));
+}
+
+// ---------------------------- Partner program badges ---------------------------- \\
+.featureIcon-3p1TC_ {
+  path {
+    fill: var(--amethyst-brand);
+  }
 }
 
 // ---------------------------- Mic test notches (also appears in VC popout) ---------------------------- \\

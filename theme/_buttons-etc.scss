@@ -12,9 +12,7 @@
 
 // ---------------------------- Checkbox ---------------------------- \\
 .checked-3_4uQ9 {
-  path {
-    fill: var(--amethyst-primary);
-  }
+  --control-brand-foreground: var(--amethyst-primary) !important;
 }
 
 #app-mount {

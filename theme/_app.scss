@@ -1,11 +1,21 @@
-$-container-margin: 4px;
-$-container-radius: 10px;
+// ---------------------------- "Body" container ---------------------------- \\
+.container-2lgZY8 {
+  @at-root {
+    .platform-web & {
+      margin-top: var(--amethyst-margin);
+    }
+
+    .platform-win & {
+      margin-top: calc(var(--amethyst-margin) * 0.5); // Account for titlebar
+    }
+  }
+}
 
 // ---------------------------- Notices ---------------------------- \\
 #app-mount { // Override #pluginNotice
   .notice-3bPHh- {
-    margin: 0 $-container-margin $-container-margin $-container-margin; // Yes
-    border-radius: $-container-radius;
+    margin: 0 var(--amethyst-margin) var(--amethyst-margin) var(--amethyst-margin); // Yes
+    border-radius: var(--amethyst-radius);
 
     &.notice-2X5hT5 {
       background-color: var(--amethyst-brand);
@@ -30,15 +40,15 @@ $-container-radius: 10px;
 // ---------------------------- Top bar ---------------------------- \\
 .container-1r6BKw {
   &.themed-ANHk51 {
-    border-radius: $-container-radius;
-    margin-bottom: $-container-margin - 1px;
+    border-radius: var(--amethyst-radius);
+    margin-bottom: calc(var(--amethyst-margin) * 0.75);
 
     > .toolbar-1t6TWx {
       background-color: var(--background-secondary-alt);
-      padding: $-container-margin + 1px $-container-margin - 1.5px;
-      border-radius: $-container-radius - 2px;
-      margin-left: $-container-margin * 2 + 2px;
-      box-shadow: 0 0 0 1px var(--background-tertiary);    
+      padding: calc(var(--amethyst-padding) * 1.25) calc(var(--amethyst-padding) * 0.625);
+      border-radius: calc(var(--amethyst-radius) * 0.8);
+      margin-left: calc(var(--amethyst-margin) * 2.5);
+      box-shadow: 0 0 0 1px var(--background-tertiary);
     }
   }
 }
@@ -71,12 +81,12 @@ $-container-radius: 10px;
 
 // ---------------------------- Settings ---------------------------- \\
 .sidebarRegionScroller-3MXcoP { // Left panel
-  border-top-right-radius: $-container-radius;
+  border-top-right-radius: var(--amethyst-radius);
 }
 
 .contentRegionScroller-26nc1e { // Right panel
-  margin-left: $-container-margin;
-  border-top-left-radius: $-container-radius;
+  margin-left: var(--amethyst-margin);
+  border-top-left-radius: var(--amethyst-radius);
 }
 
 .sidebarRegion-VFTUkN, // Left
@@ -85,8 +95,8 @@ $-container-radius: 10px;
 }
 
 .customScroller-26gWhv { // Fix for audit logs
-  margin-left: $-container-margin;
-  border-top-left-radius: $-container-radius;
+  margin-left: var(--amethyst-margin);
+  border-top-left-radius: var(--amethyst-radius);
   background-color: var(--background-accent);
 }
 
@@ -95,12 +105,12 @@ $-container-radius: 10px;
   background-color: var(--background-tertiary);
 
   > div {
-    margin-bottom: $-container-margin;
-    border-radius: $-container-radius;
+    margin-bottom: var(--amethyst-margin);
+    border-radius: var(--amethyst-radius);
     background-color: var(--background-secondary-alt);
 
     &:first-child {
-      margin-top: $-container-margin;
+      margin-top: var(--amethyst-margin);
     }
   }
 
@@ -120,7 +130,7 @@ $-container-radius: 10px;
     &:not(.hover) {
       .spotify-extra-controls {
         + .spotify-seek {
-          margin-top: $-container-margin + 10px;
+          margin-top: calc(var(--amethyst-margin) * 1.75);
         }
       }
     }
@@ -128,7 +138,7 @@ $-container-radius: 10px;
     &.hover {
       .spotify-seek {
         &, &-bar {
-          padding-top: $-container-margin + 1px;
+          padding-top: calc(var(--amethyst-padding) * 1.25);
         }
       }
     }
@@ -139,21 +149,22 @@ $-container-radius: 10px;
     }
 
     .spotify-extra-controls {
-      border-bottom-right-radius: $-container-radius;
-      border-bottom-left-radius: $-container-radius;
+      border-bottom-right-radius: var(--amethyst-radius);
+      border-bottom-left-radius: var(--amethyst-radius);
       background-color: var(--background-secondary-alt);
     }
 
     .spotify-seek {
-      border-radius: $-container-radius;
-      margin-top: $-container-margin + 1px;
+      border-radius: var(--amethyst-radius);
+      margin-top: calc(var(--amethyst-margin) * 1.25);
       background-color: var(--background-secondary-alt);
 
+      // ----- Fiddly shit don't touch ----- \\
       &-bar {
         transform: translateY(-5.2px);
-        margin-top: $-container-margin / 2;
-        margin-left: $-container-margin + 1.5px;
-        margin-right: $-container-margin + 1.5px;
+        margin-top: 2px;
+        margin-left: 5.5px;
+        margin-right: 5.5px;
 
         &-cursor {
           width: 6px;
@@ -161,41 +172,50 @@ $-container-radius: 10px;
           top: 70%;
         }
       }
+      // ----- End fiddly shit ----- \\
     }
   }
 }
 
 // ---------------------------- Sidebars ---------------------------- \\
 .sidebar-2K8pFh { // Channels
-  margin-left: $-container-margin;
+  margin-left: var(--amethyst-margin);
   background-color: var(--background-tertiary);
+
+  @at-root #app-mount & { // Avoid !important
+    border-radius: var(--amethyst-radius);
+  }
 
   > .scrollerBase-289Jih, // Server discovery
   > .container-3w7J-x, // Guild channels
   > .privateChannels-1nO12o { // Private channels
-    border-radius: $-container-radius;
+    border-radius: var(--amethyst-radius);
     background-color: var(--background-secondary);
   }
 
   .header-2V-4Sw { // Guild header
-    border-top-right-radius: $-container-radius;
+    border-top-right-radius: var(--amethyst-radius);
 
     + .animatedContainer-1NSq4T { // Fix banner having squared corner
-      border-top-right-radius: $-container-radius;
+      border-top-right-radius: var(--amethyst-radius);
     }
   }
 
   .container-3fNISf { // Boost progress bar
     background: var(--background-secondary-alt);
-    padding: $-container-margin * 2 + $-container-margin / 2;
-    margin-top: $-container-margin * -1 - 1px;
-    margin-right: $-container-margin / 2;
-    margin-bottom: $-container-margin * 2 + $-container-margin / 2;
-    border-radius: $-container-radius;
+    padding: calc(var(--amethyst-padding) * 2.5);
+    margin-top: calc(var(--amethyst-margin) * -1.25);
+    margin-right: calc(var(--amethyst-margin) * 0.5);
+    margin-bottom: calc(var(--amethyst-margin) * 2.5);
+    border-radius: var(--amethyst-radius);
   
     > .progressBarContainer-DLPbha {
       background: var(--background-primary);
-      margin-bottom: $-container-margin - 1px;
+      margin-bottom: calc(var(--amethyst-margin) * 0.75);
+    }
+
+    .progressBar-UDQ4AC {
+      background: linear-gradient(90deg, var(--amethyst-nitro-gradient-colours));
     }
 
     .divider-3C88Um {
@@ -205,9 +225,13 @@ $-container-radius: 10px;
 }
 
 // ---------------------------- Member list ---------------------------- \\
-.members-1998pB {
-  border-radius: $-container-radius;
-  margin-left: $-container-margin;
+.membersWrap-2h-GB4 {
+  background-color: var(--background-tertiary);
+
+  >.members-1998pB {
+    border-radius: var(--amethyst-radius);
+    margin-left: var(--amethyst-margin);
+  }
 }
 
 // ---------------------------- Right side containers ---------------------------- \\
@@ -216,24 +240,24 @@ $-container-radius: 10px;
 .applicationStore-1pNvnv, // Nitro page
 .pageWrapper-1PgVDX, // Server discovery
 .noChannel-3LgMRp { // No channels
-  margin-left: $-container-margin;
-  margin-bottom: $-container-margin;
-  border-radius: $-container-radius 0 0 $-container-radius;
-  background-color: var(--background-accent); // Check this
+  margin-left: var(--amethyst-margin);
+  margin-bottom: var(--amethyst-margin);
+  border-radius: var(--amethyst-radius) 0 0 var(--amethyst-radius);
+  background-color: var(--background-accent); // Check this tho LOL
 }
 
 // ---------------------------- Server list ---------------------------- \\
 .guilds-1SWlCJ {
-  margin-left: $-container-margin;
+  margin-left: var(--amethyst-margin);
 
   > .tree-2wKJdG {
     outline: none; // Fix yellow line appearing
   }
 
   .scroller-1Bvpku {
-    margin-bottom: $-container-margin;
-    border-radius: $-container-radius;
-    padding-top: $-container-margin + 3px;
+    margin-bottom: var(--amethyst-margin);
+    border-radius: var(--amethyst-radius);
+    padding-top: calc(var(--amethyst-padding) * 1.75);
     background-color: var(--background-accent);
   }
 }
@@ -241,25 +265,25 @@ $-container-radius: 10px;
 // ---------------------------- Friends page ---------------------------- \\
 .container-1D34oG {
   @at-root #app-mount & {
-    margin-right: $-container-margin;
+    margin-right: var(--amethyst-margin);
     background-color: var(--background-tertiary);
   }
 
   .peopleColumn-29fq28 {
-    border-radius: $-container-radius;
+    border-radius: var(--amethyst-radius);
   }
 
   .nowPlayingColumn-2sl4cE {
-    margin-left: $-container-margin + 1px;
+    margin-left: var(--amethyst-margin);
     background-color: var(--background-tertiary);
 
     > .container-lRFx4q {
-      border-radius: $-container-radius;
+      border-radius: var(--amethyst-radius);
     }
 
     .scroller-2ZPeAD {
       border-left: none;
-      border-radius: $-container-radius;
+      border-radius: var(--amethyst-radius);
     }
   }
 }
@@ -267,24 +291,24 @@ $-container-radius: 10px;
 // ---------------------------- Chat ---------------------------- \\
 .chat-3bRxxu { // Normal chat
   background-color: var(--background-tertiary);
-  margin-bottom: $-container-margin;
-  margin-left: $-container-margin + 1px;
-  margin-right: $-container-margin + 1px;
-  border-top-left-radius: $-container-radius;
-  border-bottom-left-radius: $-container-radius;
+  margin-bottom: var(--amethyst-margin);
+  margin-left: var(--amethyst-margin);
+  margin-right: calc(var(--amethyst-margin) * 1.25);
+  border-top-left-radius: var(--amethyst-radius);
+  border-bottom-left-radius: var(--amethyst-radius);
 
   &.threadSidebarOpen-vdkwIh { // With thread split view
-    margin-right: $-container-margin + 2px;
+    margin-right: calc(var(--amethyst-margin) * 1.5);
   }
 
   .chatContent-a9vAAp { // Normal chat container
-    border-radius: $-container-radius;
+    border-radius: var(--amethyst-radius);
     background-color: var(--background-accent);
   }
 
   > .content-yTz4x3 { // NSFW warning page
     > .scrollerBase-289Jih {
-      border-radius: $-container-radius;
+      border-radius: var(--amethyst-radius);
       background-color: var(--background-accent);
     }
   }
@@ -292,27 +316,27 @@ $-container-radius: 10px;
 
 // ---------------------------- Archived thread ---------------------------- \\
 .chatHeaderBar-4vZS1x { // Header
-  border-radius: $-container-radius $-container-radius 0 0;
+  border-radius: var(--amethyst-radius) var(--amethyst-radius) 0 0;
 }
 
 // ---------------------------- Thread split view ---------------------------- \\
 .threadSidebar-1o3BTy {
-  margin-left: -1px;
-  margin-bottom: $-container-margin;
-  margin-right: $-container-margin + 1px;
+  margin-left: calc(var(--amethyst-margin) * -0.25);
+  margin-bottom: var(--amethyst-margin);
+  margin-right: calc(var(--amethyst-margin) * 1.25);
   background-color: var(--background-tertiary);
 
   .chatContent-a9vAAp {
     background-color: var(--background-accent);
-    border-bottom-right-radius: $-container-radius;
+    border-bottom-right-radius: var(--amethyst-radius);
 
     &:first-child { // When it has not been archived and does not have the header
-      border-radius: $-container-radius;
+      border-radius: var(--amethyst-radius);
     }
   }
 
   .chat-1cCjJ5 { // Creating a thread
-    border-radius: $-container-radius;
+    border-radius: var(--amethyst-radius);
     background-color: var(--background-accent);
   }
 }
