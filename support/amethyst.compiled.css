@@ -148,7 +148,7 @@
 .sidebar-2K8pFh .container-3fNISf {
   background: var(--background-secondary-alt);
   padding: calc(var(--amethyst-padding) * 2.5);
-  margin-top: calc(var(--amethyst-margin) * -1.25);
+  margin-top: calc(var(--amethyst-margin) * -0.35);
   margin-right: calc(var(--amethyst-margin) * 0.5);
   margin-bottom: calc(var(--amethyst-margin) * 2.5);
   border-radius: var(--amethyst-radius);
@@ -312,15 +312,12 @@
   background-color: var(--amethyst-primary-active);
 }
 
+.slider-1PF9SW > .bar-2Qqk5Z {
+  background-color: var(--amethyst-primary-active);
+}
 .slider-1PF9SW .grabber-3mFHz2 {
   border-color: var(--interactive-normal);
   background-color: var(--interactive-normal);
-}
-.slider-1PF9SW .bar-2Qqk5Z {
-  background-color: var(--amethyst-primary-active);
-}
-.slider-1PF9SW .bar-2Qqk5Z > .barFill-23-gu- {
-  background-color: var(--amethyst-brand);
 }
 
 #app-mount .callContainer-36WRfH {
@@ -699,7 +696,7 @@
 #app-mount .backgroundRed-2jrPZy {
   background-color: rgba(var(--amethyst-red-rgb), 0.8);
 }
-#app-mount .wrapper-3nSjSv {
+#app-mount .wrapper-2URjuI {
   background: -webkit-gradient(linear, left top, right top, from(var(--amethyst-nitro-gradient-colours)));
   background: linear-gradient(90deg, var(--amethyst-nitro-gradient-colours));
 }
@@ -727,6 +724,9 @@
 }
 .wrapper-3qSb0d .perksTableHighlightedColumnHeaderCopy-vcrleo {
   background-image: linear-gradient(11deg, var(--amethyst-nitro-gradient-colours));
+}
+.wrapper-3qSb0d .perksTablePerkCheckmarkTier1-3NNuaR {
+  color: var(--amethyst-brand);
 }
 
 .userPopout-xaxa6l .popoutBanner-19WKGg {
@@ -785,6 +785,12 @@
   -webkit-box-shadow: var(--elevation-low);
           box-shadow: var(--elevation-low);
   background-color: var(--background-secondary-alt);
+}
+
+#sticker-picker-tab-panel .iconWrapper-3vy595,
+#sticker-picker-tab-panel .iconWrapper-1Ws4PP {
+  background: -webkit-gradient(linear, left top, right top, from(var(--amethyst-nitro-gradient-colours)));
+  background: linear-gradient(90deg, var(--amethyst-nitro-gradient-colours));
 }
 
 #gif-picker-tab-panel .result-3w1ZcL {
@@ -1061,9 +1067,11 @@
   background-color: var(--background-secondary);
   border-color: var(--background-tertiary);
 }
-#app-mount .userSettingsVoice-iwdUCU .backgroundOptionSelected-33AYZn {
-  border-color: var(--brand-experiment);
-  background-color: var(--background-tertiary);
+#app-mount .backgroundOptionSelected-33AYZn > .backgroundOptionRing-3uvncP {
+  border-color: var(--amethyst-brand);
+}
+#app-mount .backgroundOptionSelected-33AYZn > .backgroundOptionInner-xEE-w0 {
+  background: var(--background-tertiary);
 }
 #app-mount .colorPickerCustom-2CWBn2 {
   border-color: var(--background-tertiary);

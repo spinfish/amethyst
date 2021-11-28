@@ -45,16 +45,12 @@
 
 // ---------------------------- Sliders ---------------------------- \\
 .slider-1PF9SW {
+  > .bar-2Qqk5Z {
+    background-color: var(--amethyst-primary-active);
+  }
+
   .grabber-3mFHz2 {
     border-color: var(--interactive-normal);
     background-color: var(--interactive-normal);
-  }
-
-  .bar-2Qqk5Z {
-    background-color: var(--amethyst-primary-active);
-
-    > .barFill-23-gu- {
-      background-color: var(--amethyst-brand);
-    }
   }
 }

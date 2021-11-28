@@ -105,15 +105,21 @@ $disabled-switch-item-style: "opacity: 1; background-color: #{$disabled-switch-i
     background-color: var(--background-tertiary);
   }
 
-  .userSettingsVoice-iwdUCU { // Video settings preview
+  // ---------------------------- Voice & video ---------------------------- \\
+  .userSettingsVoice-iwdUCU { // Preview
     .previewOverlay-2O7_KC {
       background-color: var(--background-secondary);
       border-color: var(--background-tertiary);
     }
+  }
 
-    .backgroundOptionSelected-33AYZn {
-      border-color: var(--brand-experiment);
-      background-color: var(--background-tertiary);
+  .backgroundOptionSelected-33AYZn {
+    > .backgroundOptionRing-3uvncP {
+      border-color: var(--amethyst-brand);
+    }
+
+    > .backgroundOptionInner-xEE-w0 {
+      background: var(--background-tertiary);
     }
   }
 
