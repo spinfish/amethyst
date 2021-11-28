@@ -165,6 +165,18 @@ $disabled-switch-item-style: "opacity: 1; background-color: #{$disabled-switch-i
   }
 }
 
+// ---------------------------- User Settings sidebar ---------------------------- \\
+.side-8zPYf6 {
+  .holidayPromotionBackground-3A9hk1 { // Temp Discord Nitro offer
+    background: linear-gradient(90deg, var(--amethyst-nitro-gradient-colours));
+  }
+}
+
+// ---------------------------- Discord Nitro offer ---------------------------- \\
+.holidayHeroContainer-252amJ {
+  background: linear-gradient(102.85deg, var(--amethyst-nitro-gradient-colours));
+}
+
 // ---------------------------- Profile customization ---------------------------- \\
 .profileBannerPreview-3_l0Wd {
   > .bannerNormal-22rPhb {
