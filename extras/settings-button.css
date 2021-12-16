@@ -1,0 +1,98 @@
+/**
+ * MIT License
+ *
+ * Copyright (c) 2021-present spinfish
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+/**
+ * Cooler settings button (originally by me, improved by Loremly! :D)
+ */
+
+.unreadMentionsIndicatorTop-2-tcdU {
+  top: calc(124px + var(--amethyst-margin));
+}
+
+.tutorialContainer-11ICd5 :is(.wrapper-25eVIn, .pill-gcH-8B) {
+  margin-top: 12px;
+}
+
+.tutorialContainer-11ICd5 > .listItem-2Ig28I {
+  background: var(--background-accent);
+  padding-bottom: 96%;
+  border-radius: var(--amethyst-radius);
+}
+
+.scroller-1Bvpku {
+  margin-top: calc(129px + var(--amethyst-margin));
+  contain: none;
+}
+
+.scroller-1Bvpku > .tutorialContainer-11ICd5 {
+  position: fixed;
+  top: calc(22px + (0.5 * var(--amethyst-margin)));
+}
+
+.scroller-1Bvpku .guildSeparator-nWMCrR {
+  display: none;
+}
+
+.container-3baos1:last-child .button-14-BFJ:last-child {
+  background-color: var(--channeltextarea-background);
+  color: var(--text-normal);
+  transition: 150ms ease-out;
+  transition-property: color, background, border-radius;
+  border-radius: 50%;
+  position: fixed;
+  height: 48px;
+  width: 48px;
+  left: calc(12px + var(--amethyst-margin));
+  top: calc(91px + (0.5 * var(--amethyst-margin)));
+  /** ^^ 35 + 48 + 8 + (0.5 * var(--amethyst-margin)) */
+}
+
+.container-3baos1:last-child .button-14-BFJ:last-child svg {
+  height: 28px;
+  width: 28px;
+}
+
+.container-3baos1:last-child .button-14-BFJ:last-child::before {
+  transition: 275ms ease;
+  transition-property: transform, height;
+  background-color: white;
+  border-radius: 0 4px 4px 0;
+  position: absolute;
+  transform: scaleX(0);
+  height: 0;
+  content: "";
+  width: 4px;
+  left: -11px;
+}
+
+.container-3baos1:last-child .button-14-BFJ:last-child:hover {
+  background-color: var(--brand-experiment);
+  border-radius: 35%;
+  color: white;
+}
+
+.container-3baos1:last-child .button-14-BFJ:last-child:hover::before {
+  transform: scaleX(1);
+  height: 20px;
+}
