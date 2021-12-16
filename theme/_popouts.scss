@@ -36,6 +36,23 @@
   border-color: var(--background-tertiary);
 }
 
+// ---------------------------- Context menus ---------------------------- \\
+.activeIcon-2Xlk3z { // Afaik just on switch account context menu
+  @at-root .focused-3afm-j & { // I am a psychopath
+    path {
+      fill: white;
+    }
+
+    circle {
+      fill: var(--brand-experiment);
+    }
+  }
+
+  path {
+    fill: var(--brand-experiment);
+  }
+}
+
 // ---------------------------- Inbox, Pinned Messages ---------------------------- \\
 .messagesPopoutWrap-1MQ1bW {
   max-height: 600px !important;

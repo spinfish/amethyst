@@ -17,16 +17,16 @@
   background-color: var(--amethyst-red) !important;
 }
 
+// ---------------------------- Text badges ---------------------------- \\
 .textBadge-1iylP6 {
-  // Red badges e.g. LIVE
-  &[style*="359"] { // hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%)
-    background-color: var(--amethyst-brand) !important;
+  // Blurple badges e.g. BETA and NEW
+  &:is(.betaTag-2ehOEB, .newBadge-1Is7Nf) { // // [style="background-color: hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%);"]
+    background-color: var(--brand-experiment) !important;
   }
 
-  // Blurple badges e.g. BETA and NEW
-  &[style*="235"],
-  &.newBadge-1Is7Nf {
-    background-color: rgba(var(--amethyst-cyan), 0.35) !important;
+  // Red badges e.g. LIVE
+  &[style="background-color: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);"] {
+    background-color: var(--amethyst-brand) !important;
   }
 
   &.tag-PX6CDi { // NEW Nitro offer tag

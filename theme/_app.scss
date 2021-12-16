@@ -17,7 +17,7 @@
     margin: 0 var(--amethyst-margin) var(--amethyst-margin) var(--amethyst-margin); // Yes
     border-radius: var(--amethyst-radius);
 
-    &.notice-2X5hT5 {
+    &.notice-3uyY6c {
       background-color: var(--amethyst-brand);
     }
 
@@ -201,24 +201,24 @@
     }
   }
 
-  .container-3fNISf { // Boost progress bar
+  .container-3qpZp9 { // Boost progress bar
     background: var(--background-secondary-alt);
     padding: calc(var(--amethyst-padding) * 2.5);
-    margin-top: calc(var(--amethyst-margin) * -0.35);
-    margin-right: calc(var(--amethyst-margin) * 0.5);
-    margin-bottom: calc(var(--amethyst-margin) * 2.5);
+    margin-top: calc(var(--amethyst-margin) * -0.5);
+    margin-right: calc(var(--amethyst-margin) * 0.35);
+    margin-bottom: var(--amethyst-margin);
     border-radius: var(--amethyst-radius);
   
-    > .progressBarContainer-DLPbha {
+    > .progressBarContainer-cCu8a2 {
       background: var(--background-primary);
-      margin-bottom: calc(var(--amethyst-margin) * 0.75);
+      margin-bottom: 5px;
     }
 
-    .progressBar-UDQ4AC {
+    .progressBar-1oVG_J {
       background: linear-gradient(90deg, var(--amethyst-nitro-gradient-colours));
     }
 
-    .divider-3C88Um {
+    .divider-3HbLTj {
       display: none;
     }
   }
@@ -226,9 +226,10 @@
 
 // ---------------------------- Member list ---------------------------- \\
 .membersWrap-2h-GB4 {
+  height: -webkit-fill-available; // Fix stupid bit under shorter member lists
   background-color: var(--background-tertiary);
 
-  >.members-1998pB {
+  > .members-1998pB {
     border-radius: var(--amethyst-radius);
     margin-left: var(--amethyst-margin);
   }
