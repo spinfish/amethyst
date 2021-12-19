@@ -2,12 +2,12 @@
 #app-mount,
 .theme-light {
   .root-1gCeng,
-  .modal-yWgWj- {
+  .modal-yWgWj- { // TODO: use :is()
     box-shadow: 0 0 0 1px black;
     background-color: var(--background-secondary);
 
     .footer-2gL1pp,
-    .message-2qRu38 {
+    .message-2qRu38 { // TODO: see above
       box-shadow: inherit;
       background-color: var(--background-secondary-alt);
     }

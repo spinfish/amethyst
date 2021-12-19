@@ -143,6 +143,14 @@
   }
 }
 
+// ---------------------------- Server popout ---------------------------- \\
+#app-mount {
+  .guildPopout-3CgKqR {
+    background-color: var(--background-accent);
+    box-shadow: 0 2px 10px 0 var(--background-primary), 0 0 3.5px 0.1px var(--background-secondary-alt);
+  }
+}
+
 // ---------------------------- Emoji info popout ---------------------------- \\
 .popoutLoadingForeground-2mZT61 {
   background-image: linear-gradient(

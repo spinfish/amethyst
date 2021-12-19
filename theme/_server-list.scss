@@ -14,6 +14,12 @@
   background-color: var(--background-secondary-alt);
 }
 
+#bd-pub-button { // BetterDiscord public servers button
+  &:hover {
+    background-color: var(--brand-experiment); // BD support
+  }
+}
+
 .folderIconWrapper-1Ml_1q { // Replace blurple closed folder background
   &[style="background-color: rgba(88, 101, 242, 0.4);"] {
     background-color: rgba(var(--amethyst-brand-rgb), 0.4) !important;

@@ -10,7 +10,7 @@ $disabled-switch-item-color: "hsl(218, calc(var(--saturation-factor, 1) * 4.6%),
 $disabled-switch-item-style: "opacity: 1; background-color: #{$disabled-switch-item-color};";
 
 // ---------------------------- Switch item ---------------------------- \\
-.container-3auIfb {
+.container-3auIfb { // Regular
   &[style="#{$disabled-switch-item-style}"] {
     transition: 100ms background-color ease-in;
   }
@@ -22,6 +22,15 @@ $disabled-switch-item-style: "opacity: 1; background-color: #{$disabled-switch-i
   path {
     &:not([fill="#{$disabled-switch-item-color}"]) {
       fill: var(--brand-experiment);
+    }
+  }
+}
+
+#app-mount {
+  .bd-switch-checked { // BetterDiscord
+    > .bd-switch-body {
+      --switch-color: var(--brand-experiment);
+      transition: 100ms background-color ease-in;
     }
   }
 }

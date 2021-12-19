@@ -1,4 +1,4 @@
-@mixin filled-button($color) {
+@mixin filled-button($color, $betterdiscord: false) {
   background-color: var(--amethyst-#{$color});
 
   &:hover {
@@ -8,6 +8,12 @@
   &:active {
     background-color: var(--amethyst-#{$color}-active);
   }
+
+  @if $betterdiscord {
+    @at-root #app-mount &.selected {
+      background-color: var(--amethyst-#{$color}-active);
+    }
+  }
 }
 
 // ---------------------------- Checkbox ---------------------------- \\
@@ -15,29 +21,32 @@
   --control-brand-foreground: var(--amethyst-primary) !important;
 }
 
+// ---------------------------- Popout buttons ---------------------------- \\
 #app-mount {
-  // ---------------------------- Popout buttons ---------------------------- \\
   .colorDefault-2K3EoJ {
-    &:active, // &:not(.hideInteraction-1iHO1O)
-    &.focused-3afm-j {
+    &:is(:active, .focused-3afm-j) {
       color: white;
       background-color: var(--amethyst-brand-hover);
     }
-  }
 
-  .colorDanger-2qLCe1 { // I know this is cheating... but oh well
-    --amethyst-brand-hover: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
+    &.colorDanger-2qLCe1 { // This is totally not cheating.. lol
+      --amethyst-brand-hover: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
+    }
   }
+}
 
-  // ---------------------------- Filled buttons ---------------------------- \\
-  .lookFilled-1Gx00P {
-    &.colorBrand-3pXr91,
-    &.colorBrandNew-g5lmBU {
+// ---------------------------- Filled buttons ---------------------------- \\
+.bd-button { // BetterDiscord
+  @include filled-button("brand", $betterdiscord: true); // LOL moment
+}
+
+#app-mount {
+  .lookFilled-1Gx00P { // Regular
+    &:is(.colorBrand-3pXr91, .colorBrandNew-g5lmBU) {
       @include filled-button("brand");
     }
 
-    &.colorGrey-2DXtkV,
-    &.colorPrimary-3b3xI6 {
+    &:is(.colorGrey-2DXtkV, .colorPrimary-3b3xI6) {
       @include filled-button("primary");
     }
   }
