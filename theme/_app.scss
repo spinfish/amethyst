@@ -167,8 +167,14 @@
     }
   }
 
-  > .wrapper-24pKcD {
-    display: none;
+  > .wrapper-24pKcD { // VC container wrapper?
+    &:empty {
+      display: none;
+    }
+  }
+
+  .container-1giJp5 { // Actual VC container
+    border-bottom: none;
   }
 
   > .maximized-vv2Wr0 {
