@@ -14,7 +14,7 @@ A calm, deep purple theme for Discord heavily inspired by [the Purplous Discord 
     <li>Go to <code>src > Powercord</code> and right click <code>themes</code></li>
     <li>Select <code>Git Bash here</code> (as shown below) and then type</li>
   </ul>
-  <pre>git clone https://github.com/spinfish</pre>
+  <pre>git clone https://github.com/spinfish/amethyst</pre>
   <details>
     <summary>Screenshot of <code>Git Bash here</code></summary>
     <img src="https://media.discordapp.net/attachments/678012423067926539/835658793253470308/git_bash_here.png">
