@@ -1,12 +1,59 @@
+@use "sass:meta";
+
+// ------------------------------- WARNING ------------------------------- \\
+// ------------- Proceed with caution, as eye bleach follows ------------- \\
+// --------------- As so uttered by Him In ALl Seriousness --------------- \\
+// ----------------------------------------------------------------------- \\
+
+@mixin container($background: null, $gap: null, $radius: null, $margin: null) {
+  @if $gap {
+    gap: var(--amethyst-margin);
+  }
+
+  @if $radius {
+    border-radius: var(--amethyst-radius);
+  }
+
+  @if $background {
+    background-color: var(--background-#{$background});
+  }
+
+  @if $margin { // Oh boy lmao
+    @if meta.type-of($margin) == string {
+      margin-#{$margin}: var(--amethyst-margin);
+    }
+
+    @else if meta.type-of($margin) == list {
+      margin: {
+        @each $side in $margin {
+          #{$side}: var(--amethyst-margin);
+        }
+      }
+    }
+
+    @else if meta.type-of($margin) == map {
+      margin: {
+        @each $side, $multiplier in $margin {
+          #{$side}: calc(var(--amethyst-margin) * #{$multiplier});
+        }
+      }
+    }
+
+    @else {
+      margin: var(--amethyst-margin);
+    }
+  }
+}
+
 // ---------------------------- "Body" container ---------------------------- \\
 .container-2lgZY8 {
   @at-root {
     .platform-web & {
-      margin-top: var(--amethyst-margin);
+      @include container($margin: "top");
     }
 
     .platform-win & {
-      margin-top: calc(var(--amethyst-margin) * 0.5); // Account for titlebar
+      @include container($margin: ("top": 0.5)); // Account for titlebar
     }
   }
 }
@@ -38,88 +85,82 @@
 }
 
 // ---------------------------- Notices ---------------------------- \\
-#app-mount { // Override #pluginNotice
-  .notice-3bPHh- {
-    margin-bottom: var(--amethyst-margin);
-    border-radius: var(--amethyst-radius);
+.notice-3bPHh- {
+  @include container($radius: true, $margin: ("right", "left"));
 
-    &.notice-3uyY6c {
-      background-color: var(--amethyst-brand);
-    }
-
-    // &.colorBrand-2zeG8h {}
-
-    // &.colorDanger-4gmAY0 {
-    //   background-color: var(--amethyst-red);  
-    // }
-
-    // &.colorDefault-22HBa0 {
-    //   background-color: var(--amethyst-orange);
-    // }
-
-    // &.colorSuccess-1hnbW2 {
-    //   background-color: var(--amethyst-cyan);
-    // }
+  &:is(.colorInfo-2URYW5, .notice-3uyY6c) {
+    background-color: var(--amethyst-brand);
   }
+
+  &.colorSuccess-1hnbW2 {
+    background-color: var(--amethyst-green);
+  }
+
+  &.noticeWrapper-8z511t { // BD
+    border-radius: var(--amethyst-radius) !important; // Plugin moment
+    margin-bottom: calc(var(--amethyst-margin) + 1px);
+  }
+
+      // &.colorBrand-2zeG8h {}
+
+      // &.colorDanger-4gmAY0 {
+      //   background-color: var(--amethyst-red);  
+      // }
+
+      // &.colorDefault-22HBa0 {
+      //   background-color: var(--amethyst-orange);
+      // }
 }
 
 // ---------------------------- Main ---------------------------- \\
 .container-2lgZY8 { // Server sidebar + channels/chat (friends page) container
-  grid-gap: var(--amethyst-margin);
+  gap: var(--amethyst-margin);
   background-color: var(--background-tertiary);
 }
 
 // ---------------------------- Channels/chat container ---------------------------- \\
 .content-98HsJk {
-  grid-gap: var(--amethyst-margin);
-  margin-right: var(--amethyst-margin);
+  @include container($gap: true, $margin: "right");
 
   > .chat-3bRxxu { // Title bar/member sidebar/chat container
-    grid-gap: var(--amethyst-margin);
-    background: var(--background-tertiary);
-    margin-bottom: var(--amethyst-margin);
+    @include container($gap: true, $background: "tertiary", $margin: "bottom");
 
     > .wrapper-2qzCYF { // Call container background
-      background: var(--background-tertiary);
+      @include container($background: "tertiary");
     }
 
     .callContainer-36WRfH {
-      border-radius: var(--amethyst-radius);
+      @include container($radius: true);
     }
   }
 
   .content-yTz4x3 { // Member sidebar/chat container
-    grid-gap: var(--amethyst-margin);
+    @include container($gap: true);
 
     > .scrollerBase-289Jih { // NSFW or "You're not old enough..."
-      background-color: var(--background-accent);
-      border-radius: var(--amethyst-radius);
+      @include container($radius: true, $background: "accent");
     }
   }
 
   > .noChannel-3LgMRp { // "You find yourself in a strange place..."
-    background-color: var(--background-accent);
-    border-radius: var(--amethyst-radius);
-    margin-bottom: var(--amethyst-margin);
+    @include container($background: "accent", $radius: true, $margin: "bottom");
   }
 }
 
 .chatContent-a9vAAp { // Chat background
-  background: var(--background-primary);
-  border-radius: var(--amethyst-radius);
+  @include container($background: "primary", $radius: true);
 }
 
 // ---------------------------- Channels sidebar ---------------------------- \\
 .sidebar-2K8pFh {
-  grid-gap: var(--amethyst-margin);
-  background: var(--background-tertiary);
+  @include container($gap: true, $background: "tertiary");
 
   > :is(.container-3w7J-x, .privateChannels-1nO12o, .scrollerBase-289Jih) { // 1, 2: Channel list, 3: Server Discovery
-    border-radius: var(--amethyst-radius);
+    @include container($radius: true);
   }
 
   > .scrollerBase-289Jih { // Server Discovery
-    background: var(--background-secondary);
+    @include container($background: "secondary");
   }
 
   .animatedContainer-1NSq4T { // Server banner
@@ -129,15 +170,20 @@
 
 // ---------------------------- Boost progress bar ---------------------------- \\
 .container-3qpZp9 {
-  background: var(--background-secondary-alt);
+  @include container(
+    $background: "secondary-alt",
+    $margin: (
+      "top": -0.5,
+      "right": 0.35
+    ),
+    $radius: true
+  );
+
+  margin-bottom: var(--amethyst-margin); // TODO: design stupid mixin better
   padding: calc(var(--amethyst-padding) * 2.5);
-  margin-top: calc(var(--amethyst-margin) * -0.5);
-  margin-right: calc(var(--amethyst-margin) * 0.35);
-  margin-bottom: var(--amethyst-margin);
-  border-radius: var(--amethyst-radius);
   
   > .progressBarContainer-cCu8a2 {
-    background: var(--background-primary);
+    @include container($background: "primary");
     margin-bottom: 5px;
   }
 
@@ -152,18 +198,17 @@
 
 // ---------------------------- User area ---------------------------- \\
 .panels-j1Uci_ {
+  @include container($gap: true, $background: "tertiary");
+
   display: flex;
   flex-direction: column;
-  grid-gap: var(--amethyst-margin);
-  background: var(--background-tertiary);
 
   > div {
+    @include container($radius: true, $background: "secondary-alt");
     border-bottom: none;
-    border-radius: var(--amethyst-radius);
-    background: var(--background-secondary-alt);
 
     &:last-child {
-      margin-bottom: var(--amethyst-margin);
+      @include container($margin: "bottom"); // Reminds me of Python :smiling_face_with_tear:
     }
   }
 
@@ -179,75 +224,94 @@
 
   > .maximized-vv2Wr0 {
     .cover-SwJ-ck { // DevilBro Spotify controls album cover
-      border-top-left-radius: var(--amethyst-radius);
-      border-top-right-radius: var(--amethyst-radius);
+      border-top: {
+        left-radius: var(--amethyst-radius);
+        right-radius: var(--amethyst-radius);
+      }
     }
   }
 }
 
 // ---------------------------- Servers sidebar ---------------------------- \\
 .guilds-1SWlCJ {
-  margin-left: var(--amethyst-margin);
+  @include container($margin: "left");
 
   > .tree-2wKJdG {
     outline: none;
   }
 
   .scroller-1Bvpku {
-    margin-bottom: var(--amethyst-margin);
-    border-radius: var(--amethyst-radius);
+    @include container($radius: true, $background: "accent", $margin: "bottom");
     padding-top: calc(var(--amethyst-padding) * 1.75);
-    background-color: var(--background-accent);
   }
 }
 
 // ---------------------------- Member list ---------------------------- \\
 .membersWrap-2h-GB4 {
+  @include container($background: "tertiary");
   height: -webkit-fill-available;
-  background-color: var(--background-tertiary);
+
+  &.emptyState-2KU9WW { // Fix empty thread section
+    @include container($background: "secondary", $radius: true);
+  }
 
   > .members-1998pB {
-    border-radius: var(--amethyst-radius);
+    @include container($radius: true);
+  }
+}
+
+// ---------------------------- Search results ---------------------------- \\
+.searchResultsWrap-3-pOjs {
+  @include container($gap: true, $background: "tertiary");
+
+  > .searchHeader-2XoQg7 {
+    @include container($radius: true, $background: "secondary-alt");
+  }
+
+  > .scroller-3GIiMh {
+    @include container($radius: true, $background: "secondary");
   }
 }
 
 // ---------------------------- Title bar container ---------------------------- \\
 .container-1r6BKw {
   &.themed-ANHk51 {
-    border-radius: var(--amethyst-radius);
+    @include container($radius: true);
 
     > .toolbar-1t6TWx { // Toolbar
-      background-color: var(--background-secondary-alt);
-      padding: calc(var(--amethyst-padding) * 1.25) calc(var(--amethyst-padding) * 0.625);
+      @include container($background: "secondary-alt", $margin: ("left": 2.5));
+
       border-radius: calc(var(--amethyst-radius) * 0.8);
-      margin-left: calc(var(--amethyst-margin) * 2.5);
       box-shadow: 0 0 0 1px var(--background-tertiary);
+      padding: calc(var(--amethyst-padding) * 1.25) calc(var(--amethyst-padding) * 0.625);
     }
   }
 }
 
 // ---------------------------- Thread panel ---------------------------- \\
 .threadSidebar-1o3BTy {
-  grid-gap: var(--amethyst-margin);
+  @include container(
+    $gap: true,
+    $radius: true,
+    $background: "tertiary",
+    $margin: "bottom"
+  );
+
   margin-left: unset;
-  margin-bottom: var(--amethyst-margin);
-  border-radius: var(--amethyst-radius);
-  background: var(--background-tertiary);
 
   > .container-2w6o5e { // Create thread container
-    grid-gap: var(--amethyst-margin);
+    @include container($gap: true);
 
     > .chat-1cCjJ5 { // Create thread chat preview
-      background: var(--background-primary);
-      border-radius: var(--amethyst-radius);
+      @include container($radius: true, $background: "primary");
     }
   }
 
   .chat-15Vmww {
-    grid-gap: var(--amethyst-margin);
+    @include container($gap: true);
 
     > .chatHeaderBar-4vZS1x {
-      border-radius: var(--amethyst-radius);
+      @include container($radius: true);
     }
   }
 }
@@ -255,24 +319,26 @@
 // ---------------------------- Friends page container ---------------------------- \\
 .container-1D34oG {
   @at-root .content-98HsJk > & {
-    grid-gap: var(--amethyst-margin);
-    background: var(--background-tertiary);
-    margin-bottom: var(--amethyst-margin); // Could also put this on tabBody
+    @include container(
+      $gap: true,
+      $background: "tertiary",
+      $margin: "bottom" // This could also go on tabBody
+    );
   }
 
   > .tabBody-3YRQ8W {
-    grid-gap: var(--amethyst-margin);
+    @include container($gap: true);
   }
 
   .peopleColumn-29fq28 {
-    border-radius: var(--amethyst-radius);
+    @include container($radius: true);
   }
 
   .nowPlayingColumn-2sl4cE {
-    background: var(--background-tertiary);
+    @include container($background: "tertiary");
 
     > .container-lRFx4q {
-      border-radius: var(--amethyst-radius);
+      @include container($radius: true);
       
       > .scroller-2ZPeAD {
         border-left: none;
@@ -283,15 +349,13 @@
 
 // ---------------------------- Nitro page ---------------------------- \\
 .applicationStore-1pNvnv { // TODO: find out why there's a huge gap on the right side
-  background: var(--background-tertiary);
-  margin-bottom: var(--amethyst-margin);
+  @include container($background: "tertiary", $margin: "bottom");
 
   > .homeWrapperNormal-2KSUEa {
-    grid-gap: var(--amethyst-margin);
-    background: var(--background-tertiary);
+    @include container($gap: true, $background: "tertiary");
 
     > .scroller-9moviB {
-      border-radius: var(--amethyst-radius);
+      @include container($radius: true);
     }
   }
 }
@@ -299,43 +363,43 @@
 // ---------------------------- Settings ---------------------------- \\
 .layer-3QrUeG {
   ~ .layer-3QrUeG { // Thanks DevilBro ig lol
-    background: var(--background-tertiary);    
+    @include container($background: "tertiary");  
   }
 }
 
 .standardSidebarView-3F1I7i { // Settings container
-  margin-bottom: var(--amethyst-margin);
-  grid-gap: var(--amethyst-margin);
-  margin-left: var(--amethyst-margin);
-  margin-right: var(--amethyst-margin);
-  background: var(--background-teriary);
+  @include container(
+    $gap: true,
+    $background: "tertiary",
+    $margin: ("bottom", "left", "right")
+  );
 }
 
 .sidebarRegionScroller-3MXcoP, // Left panel
 .contentRegionScroller-26nc1e, // Normal right panel
 .customScroller-26gWhv {       // Weird audit log right panel
-  border-radius: var(--amethyst-radius);
+  @include container($radius: true);
 }
 
 .sidebarRegion-VFTUkN,
 .contentRegion-3nDuYy {
-  background: var(--background-tertiary);
+  @include container($background: "tertiary");
 }
 
 .customScroller-26gWhv { // Weird audit log scroller
-  background: var(--background-accent);
+  @include container($background: "accent");
 }
 
 // ---------------------------- Powercord Spotify ---------------------------- \\
 #app-mount {
   .powercord-spotify {
-    background-color: var(--background-tertiary);
+    @include container($background: "tertiary");
 
     // This is really fucking gross
     &:not(.hover) {
       .spotify-extra-controls {
         + .spotify-seek {
-          margin-top: calc(var(--amethyst-margin) * 1.75);
+          @include container($margin: ("top": 1.75));
         }
       }
     }
@@ -349,20 +413,24 @@
     }
 
     > .container-3baos1 {
+      @include container($background: "secondary-alt");
       border-radius: inherit;
-      background-color: var(--background-secondary-alt);
     }
 
     .spotify-extra-controls {
-      border-bottom-right-radius: var(--amethyst-radius);
-      border-bottom-left-radius: var(--amethyst-radius);
-      background-color: var(--background-secondary-alt);
+      @include container($background: "secondary-alt");
+      border-bottom: {
+        right-radius: var(--amethyst-radius);
+        left-radius: var(--amethyst-radius);
+      }
     }
 
     .spotify-seek {
-      border-radius: var(--amethyst-radius);
-      margin-top: calc(var(--amethyst-margin) * 1.25);
-      background-color: var(--background-secondary-alt);
+      @include container(
+        $radius: true,
+        $background: "secondary-alt",
+        $margin: ("top": 1.25)
+      );
 
       // ----- Fiddly shit don't touch ----- \\
       &-bar {
