@@ -17,19 +17,19 @@
 }
 
 // ---------------------------- Checkbox ---------------------------- \\
-.checked-3_4uQ9 {
+.checked-1pZh2h {
   --control-brand-foreground: var(--amethyst-primary) !important;
 }
 
 // ---------------------------- Popout buttons ---------------------------- \\
 #app-mount {
-  .colorDefault-2K3EoJ {
-    &:is(:active, .focused-3afm-j) {
+  .colorDefault-CDqZdO {
+    &:is(:active, .focused-3qFvc8) {
       color: white;
       background-color: var(--amethyst-brand-hover);
     }
 
-    &.colorDanger-2qLCe1 { // This is totally not cheating.. lol
+    &.colorDanger-3n-KnP { // This is totally not cheating.. lol
       --amethyst-brand-hover: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
     }
   }
@@ -41,24 +41,24 @@
 }
 
 #app-mount {
-  .lookFilled-1Gx00P { // Regular
-    &:is(.colorBrand-3pXr91, .colorBrandNew-g5lmBU) {
+  .lookFilled-yCfaCM { // Regular
+    &:is(.colorBrand-I6CyqQ, .colorBrandNew-2-gGsS) {
       @include filled-button("brand");
     }
 
-    &:is(.colorGrey-2DXtkV, .colorPrimary-3b3xI6) {
+    &:is(.colorGrey-2iAG-B, .colorPrimary-2AuQVo) {
       @include filled-button("primary");
     }
   }
 }
 
 // ---------------------------- Sliders ---------------------------- \\
-.slider-1PF9SW {
-  > .bar-2Qqk5Z {
+.slider-1NC-Gf {
+  > .bar-1Bhnl9 {
     background-color: var(--amethyst-primary-active);
   }
 
-  .grabber-3mFHz2 {
+  .grabber-2GQyvM {
     border-color: var(--interactive-normal);
     background-color: var(--interactive-normal);
   }

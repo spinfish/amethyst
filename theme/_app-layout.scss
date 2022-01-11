@@ -2,7 +2,7 @@
 
 // ------------------------------- WARNING ------------------------------- \\
 // ------------- Proceed with caution, as eye bleach follows ------------- \\
-// --------------- As so uttered by Him In ALl Seriousness --------------- \\
+// --------------- As so uttered by Him in All Seriousness --------------- \\
 // ----------------------------------------------------------------------- \\
 
 @mixin container($background: null, $gap: null, $radius: null, $margin: null) {
@@ -45,6 +45,11 @@
   }
 }
 
+// ---------------------------- Bruh ---------------------------- \\
+.erd_scroll_detection_container {
+  display: none !important;
+}
+
 // ---------------------------- "Body" container ---------------------------- \\
 .container-2lgZY8 {
   @at-root {
@@ -85,10 +90,10 @@
 }
 
 // ---------------------------- Notices ---------------------------- \\
-.notice-3bPHh- {
-  @include container($radius: true, $margin: ("right", "left"));
+.notice-2HEN-u {
+  @include container($radius: true);
 
-  &:is(.colorInfo-2URYW5, .notice-3uyY6c) {
+  &:is(/* .colorInfo-2URYW5, */ .notice-3uyY6c) {
     background-color: var(--amethyst-brand);
   }
 
@@ -113,63 +118,75 @@
 }
 
 // ---------------------------- Main ---------------------------- \\
-.container-2lgZY8 { // Server sidebar + channels/chat (friends page) container
-  gap: var(--amethyst-margin);
-  background-color: var(--background-tertiary);
+.container-1eFtFS { // Server sidebar + channels/chat (friends page) container
+  @include container($gap: true, $background: "tertiary", $margin: "bottom");
+
+  > .base-2jDfDU { // Basically channels/chat container but with notice at the top e.g. server preview
+    @include container($gap: true, $margin: "right");
+  }
 }
 
 // ---------------------------- Channels/chat container ---------------------------- \\
-.content-98HsJk {
-  @include container($gap: true, $margin: "right");
+.content-1SgpWY {
+  @include container($gap: true);
 
-  > .chat-3bRxxu { // Title bar/member sidebar/chat container
-    @include container($gap: true, $background: "tertiary", $margin: "bottom");
+  > .resizeHandle-PBRzPC { // Resizer bar on thread split view
+    @include container($background: "primary", $radius: true, $margin: "");//bottom
+    height: unset;
+  }
 
-    > .wrapper-2qzCYF { // Call container background
+  > .chat-2ZfjoI { // Title bar/member sidebar/chat container
+    @include container($gap: true, $background: "tertiary", $margin: "");//bottom
+
+    > .wrapper-1gVUIN { // Call container background
       @include container($background: "tertiary");
     }
 
-    .callContainer-36WRfH {
+    .callContainer-HtHELf {
       @include container($radius: true);
     }
   }
 
-  .content-yTz4x3 { // Member sidebar/chat container
+  .content-1jQy2l { // Member sidebar/chat container
     @include container($gap: true);
 
-    > .scrollerBase-289Jih { // NSFW or "You're not old enough..."
+    > .scrollerBase-_bVAAt { // NSFW or "You're not old enough..."
       @include container($radius: true, $background: "accent");
     }
   }
 
-  > .noChannel-3LgMRp { // "You find yourself in a strange place..."
-    @include container($background: "accent", $radius: true, $margin: "bottom");
+  > .noChannel-1GDIAZ { // "You find yourself in a strange place..."
+    @include container($background: "accent", $radius: true, $margin: "");//bottom
   }
 }
 
-.chatContent-a9vAAp { // Chat background
+.chatContent-3KubbW { // Chat background
   @include container($background: "primary", $radius: true);
 }
 
 // ---------------------------- Channels sidebar ---------------------------- \\
-.sidebar-2K8pFh {
+.sidebar-1tnWFu {
   @include container($gap: true, $background: "tertiary");
 
-  > :is(.container-3w7J-x, .privateChannels-1nO12o, .scrollerBase-289Jih) { // 1, 2: Channel list, 3: Server Discovery
+  > :is(.container-1NXEtd, .privateChannels-oVe7HL, .scrollerBase-_bVAAt) { // 1, 2: Channel lists, 3: Server Discovery
     @include container($radius: true);
   }
 
-  > .scrollerBase-289Jih { // Server Discovery
+  > .container-1NXEtd { // Server channel list
+    overflow: hidden; // Hide sharp corners of channel header (SMART MOMENT ?!1!)
+  }
+
+  > .scrollerBase-_bVAAt { // Server Discovery
     @include container($background: "secondary");
   }
 
-  .animatedContainer-1NSq4T { // Server banner
+  .animatedContainer-2laTjx { // Server banner
     border-top-right-radius: var(--amethyst-radius);
   }
 }
 
 // ---------------------------- Boost progress bar ---------------------------- \\
-.container-3qpZp9 {
+.container-1eD8xH {
   @include container(
     $background: "secondary-alt",
     $margin: (
@@ -182,22 +199,22 @@
   margin-bottom: var(--amethyst-margin); // TODO: design stupid mixin better
   padding: calc(var(--amethyst-padding) * 2.5);
   
-  > .progressBarContainer-cCu8a2 {
+  > .progressBarContainer-2E4oR- {
     @include container($background: "primary");
     margin-bottom: 5px;
   }
 
-  .progressBar-1oVG_J {
+  .progressBar-1Tzim4 {
     background: linear-gradient(90deg, var(--amethyst-nitro-gradient-colours));
   }
 
-  .divider-3HbLTj {
+  .divider-1Y1mB0 {
     display: none;
   }
 }
 
 // ---------------------------- User area ---------------------------- \\
-.panels-j1Uci_ {
+.panels-3wFtMD {
   @include container($gap: true, $background: "tertiary");
 
   display: flex;
@@ -206,79 +223,75 @@
   > div {
     @include container($radius: true, $background: "secondary-alt");
     border-bottom: none;
-
-    &:last-child {
-      @include container($margin: "bottom"); // Reminds me of Python :smiling_face_with_tear:
-    }
   }
 
-  > .wrapper-24pKcD { // VC container wrapper?
+  > .wrapper-3Hk9OB { // VC container wrapper?
     &:empty {
       display: none;
     }
   }
 
-  .container-1giJp5 { // Actual VC container
+  .container-1zzFcN { // Actual VC container
     border-bottom: none;
   }
+}
 
-  > .maximized-vv2Wr0 {
-    .cover-SwJ-ck { // DevilBro Spotify controls album cover
-      border-top: {
-        left-radius: var(--amethyst-radius);
-        right-radius: var(--amethyst-radius);
-      }
+.maximized-vv2Wr0 { // Fixing DevilBro Spotify controls album cover
+  .cover-SwJ-ck {
+    border-top: {
+      left-radius: var(--amethyst-radius);
+      right-radius: var(--amethyst-radius);
     }
   }
 }
 
 // ---------------------------- Servers sidebar ---------------------------- \\
-.guilds-1SWlCJ {
+.guilds-2JjMmN {
   @include container($margin: "left");
 
-  > .tree-2wKJdG {
+  > .tree-3agP2X {
     outline: none;
   }
 
-  .scroller-1Bvpku {
-    @include container($radius: true, $background: "accent", $margin: "bottom");
+  .scroller-3X7KbA {
+    @include container($radius: true, $background: "accent", $margin: "");//bottom
     padding-top: calc(var(--amethyst-padding) * 1.75);
   }
 }
 
 // ---------------------------- Member list ---------------------------- \\
-.membersWrap-2h-GB4 {
+.membersWrap-3NUR2t {
   @include container($background: "tertiary");
   height: -webkit-fill-available;
 
-  &.emptyState-2KU9WW { // Fix empty thread section
+  &.emptyState-2DwxJe { // Fix empty thread section
     @include container($background: "secondary", $radius: true);
   }
 
-  > .members-1998pB {
+  > .members-3WRCEx {
     @include container($radius: true);
   }
 }
 
 // ---------------------------- Search results ---------------------------- \\
-.searchResultsWrap-3-pOjs {
+.searchResultsWrap-5RVOkx {
   @include container($gap: true, $background: "tertiary");
 
-  > .searchHeader-2XoQg7 {
+  > .searchHeader-1r_ZSh {
     @include container($radius: true, $background: "secondary-alt");
   }
 
-  > .scroller-3GIiMh {
+  > .scroller-3iiyhZ {
     @include container($radius: true, $background: "secondary");
   }
 }
 
 // ---------------------------- Title bar container ---------------------------- \\
-.container-1r6BKw {
-  &.themed-ANHk51 {
+.container-ZMc96U {
+  &.themed-Hp1KC_ {
     @include container($radius: true);
 
-    > .toolbar-1t6TWx { // Toolbar
+    > .toolbar-3_r2xA { // Toolbar
       @include container($background: "secondary-alt", $margin: ("left": 2.5));
 
       border-radius: calc(var(--amethyst-radius) * 0.8);
@@ -289,58 +302,53 @@
 }
 
 // ---------------------------- Thread panel ---------------------------- \\
-.threadSidebar-1o3BTy {
+.container-3XgAHv {
   @include container(
     $gap: true,
     $radius: true,
-    $background: "tertiary",
-    $margin: "bottom"
+    $background: "tertiary"
   );
 
   margin-left: unset;
 
-  > .container-2w6o5e { // Create thread container
+  > .container-1RZJZM { // Create thread container
     @include container($gap: true);
 
-    > .chat-1cCjJ5 { // Create thread chat preview
+    > .chat-1rZYgu { // Create thread chat preview
       @include container($radius: true, $background: "primary");
     }
   }
 
-  .chat-15Vmww {
-    @include container($gap: true);
+  // .chat-3JZdy8 {
+  //   @include container($gap: true);
 
-    > .chatHeaderBar-4vZS1x {
-      @include container($radius: true);
-    }
-  }
+  //   > .chatHeaderBar-4vZS1x {
+  //     @include container($radius: true);
+  //   }
+  // }
 }
 
 // ---------------------------- Friends page container ---------------------------- \\
-.container-1D34oG {
-  @at-root .content-98HsJk > & {
-    @include container(
-      $gap: true,
-      $background: "tertiary",
-      $margin: "bottom" // This could also go on tabBody
-    );
+.container-2cd8Mz {
+  @at-root .content-1SgpWY > & {
+    @include container($gap: true, $background: "tertiary");
   }
 
-  > .tabBody-3YRQ8W {
+  > .tabBody-2dgbAs {
     @include container($gap: true);
   }
 
-  .peopleColumn-29fq28 {
-    @include container($radius: true);
+  .peopleColumn-1wMU14 {
+    @include container($radius: true, $background: "primary");
   }
 
-  .nowPlayingColumn-2sl4cE {
+  .nowPlayingColumn-1eCBCN {
     @include container($background: "tertiary");
 
-    > .container-lRFx4q {
+    > .container-1oAagU {
       @include container($radius: true);
       
-      > .scroller-2ZPeAD {
+      > .scroller-hE2gWq {
         border-left: none;
       }
     }
@@ -348,45 +356,53 @@
 }
 
 // ---------------------------- Nitro page ---------------------------- \\
-.applicationStore-1pNvnv { // TODO: find out why there's a huge gap on the right side
-  @include container($background: "tertiary", $margin: "bottom");
+.applicationStore-2nk7Lo {
+  @include container($background: "tertiary");
 
-  > .homeWrapperNormal-2KSUEa {
+  > .homeWrapperNormal-bu1BS6 {
     @include container($gap: true, $background: "tertiary");
 
-    > .scroller-9moviB {
+    > .scroller-29cQFV {
       @include container($radius: true);
     }
   }
 }
 
-// ---------------------------- Settings ---------------------------- \\
-.layer-3QrUeG {
-  ~ .layer-3QrUeG { // Thanks DevilBro ig lol
-    @include container($background: "tertiary");  
+// ---------------------------- Discovery page ---------------------------- \\
+#app-mount {
+  .pageWrapper-2PwDoS {
+    // background-color: var(--background-accent);
+    @include container($radius: true, $background: "accent");
   }
 }
 
-.standardSidebarView-3F1I7i { // Settings container
+// ---------------------------- Settings ---------------------------- \\
+.layer-86YKbF {
+  ~ .layer-86YKbF { // Thanks DevilBro ig lol
+    @include container($background: "tertiary", $margin: "bottom");  
+  }
+}
+
+.standardSidebarView-E9Pc3j { // Settings container
   @include container(
     $gap: true,
     $background: "tertiary",
-    $margin: ("bottom", "left", "right")
+    $margin: ("left", "right")
   );
 }
 
-.sidebarRegionScroller-3MXcoP, // Left panel
-.contentRegionScroller-26nc1e, // Normal right panel
-.customScroller-26gWhv {       // Weird audit log right panel
+.sidebarRegionScroller-FXiQOh, // Left panel
+.contentRegionScroller-2_GT_N, // Normal right panel
+.customScroller-m1-jZn {       // Weird audit log right panel
   @include container($radius: true);
 }
 
-.sidebarRegion-VFTUkN,
-.contentRegion-3nDuYy {
+.sidebarRegion-1VBisG,
+.contentRegion-3HkfJJ {
   @include container($background: "tertiary");
 }
 
-.customScroller-26gWhv { // Weird audit log scroller
+.customScroller-m1-jZn { // Weird audit log scroller
   @include container($background: "accent");
 }
 
@@ -412,7 +428,7 @@
       }
     }
 
-    > .container-3baos1 {
+    > .container-YkUktl {
       @include container($background: "secondary-alt");
       border-radius: inherit;
     }

@@ -1,44 +1,31 @@
 // ---------------------------- Users ---------------------------- \\
-.userPopout-xaxa6l {
-  .popoutBanner-19WKGg {
-    background-color: inherit !important;
-  }
-}
-
-.note-1oo11U { // User notes
-  margin-bottom: 11px;
-}
-
-.textarea-2r0oV8 {
-  // The following applies to user modals as \\
-  // well but wasn't sure where else to put it \\
-
-  height: fit-content !important;
-  border-radius: 8px;
-  background-color: var(--background-secondary-alt);
+.textarea-_59yqs {
+  margin-bottom: 5px;
+  max-height: 150px; // Bit more sane don't you think
+  transition: background 200ms ease;
 
   &:empty {
-    height: 22.5px !important; // I don't know :sob:
+    height: 24px !important;
   }
 
   &:focus {
-    background-color: rgba(var(--amethyst-primary-rgb), 0.05);
+    background: rgba(var(--amethyst-primary-rgb), 0.05);
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: var(--background-modifier-hover);
+    background: var(--background-modifier-hover);
   }
 }
 
 // ---------------------------- Add role ---------------------------- \\
-.container-3XJ8ns {
+.container-2O1UgZ {
   box-shadow: var(--elevation-medium);
   border-color: var(--background-tertiary);
 }
 
 // ---------------------------- Context menus ---------------------------- \\
-.activeIcon-2Xlk3z { // Afaik just on switch account context menu
-  @at-root .focused-3afm-j & { // I am a psychopath
+.activeIcon-1ykRnF { // Afaik just on switch account context menu
+  @at-root .focused-3qFvc8 & { // I am a psychopath
     path {
       fill: white;
     }
@@ -54,7 +41,7 @@
 }
 
 // ---------------------------- Inbox, Pinned Messages ---------------------------- \\
-.messagesPopoutWrap-1MQ1bW {
+.messagesPopoutWrap-3zryHW {
   max-height: 600px !important;
   width: fit-content;
   max-width: 480px;
@@ -62,7 +49,7 @@
 
 // ---------------------------- Member list role tooltip ---------------------------- \\
 #app-mount {
-  .overflowRolesPopout-140n9i {
+  .overflowRolesPopout-1Puiuq {
     overflow: auto;
     max-height: 350px;
 
@@ -77,7 +64,7 @@
       }
     }
 
-    &, .overflowRolesPopoutArrow-2O66oH {
+    &, .overflowRolesPopoutArrow-2R7g3K {
       box-shadow: var(--elevation-low);
       background-color: var(--background-secondary-alt);      
     }
@@ -86,73 +73,54 @@
 
 // ---------------------------- Sticker picker ---------------------------- \\
 #sticker-picker-tab-panel {
-  .iconWrapper-3vy595,
-  .iconWrapper-1Ws4PP {
+  .iconWrapper-Tkg0P1,
+  .iconWrapper-3pqduA {
     background: linear-gradient(90deg, var(--amethyst-nitro-gradient-colours));
   }
 }
 
 // ---------------------------- GIF picker ---------------------------- \\
 #gif-picker-tab-panel {
-  .result-3w1ZcL {
+  .result-3OpoO7 {
     background-color: var(--background-secondary-alt) !important;
   }
 
-  .categoryFadeBlurple-1j72_A {
-    background-color: rgba(var(--amethyst-primary-rgb), 0.85);
-  }
-
-  .placeholder-1kJjXI {
+  .placeholder-2Mfkde {
     background-color: var(--background-modifier-hover);
   }
 
-  .emptyHintCard-2mUdMe {
+  .emptyHintCard-3Btf0V {
     background-color: var(--background-primary);
   }
 }
 
 // ---------------------------- Emoji picker ---------------------------- \\
 #emoji-picker-tab-panel {
-  .imageLoading-bpSr0M {
+  .imageLoading-2uloYN {
     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ4SURBVGhD7ZrPS1RBAMdHi7wYRCheRDwU/Tj1Ywk7eTAkaCE75r/QoWNBdOkgHcKT2a1zeogOnQTBolNFSBBpeIjwoLCHapNArfx837xZ19bdtdQ3M/C+8Nn5scL7fue9N7PM2GJ2qMOmq51iCPqhAN3QAXuhEizCW3gBz8pm+QdlUzUNgPFjFHdgGA6pLwOtwSTcI8inpKeO6gbAuMzehxvgjP+BHd+1/1T1NRRkDG4RRPUabWsG870UU3A86cjGeCPNw2VCfLbNTdWYwvxpihnoTDrC0VcYJMQb27TaEiAd+dcQmnn3BKzAuer3ohIA8wcp3sMp8P3INNIXOEmIn2q06iPVCMi8FKp5qQce2GpqlNHXVPkBspomd6vfcIK7sODuwG2Ixbwk33dVaWH0tcJqJWxTR0RahS4luQaxmdckoyemqACX1BOZ3CTTrwAXbT1KFRQgtEXrX9StAEdsPUp1KEDUygP4Vh7At/IAvpUH8K08gG/lAXwrD+BbeQDfUgBtqcSqkgLoZCRWLSrArK1HqVkFmLb1ZL8xNk1ra1G7EksQ2+7cOnS2ls2yTj6eJF1x3YWn8u6mUR3mKVHI5wLV+gXybA7oY9WslNpM+1Gq2mYM+XTGeRtn9B+ro2I03WZ/B+5kMlTpxLJAgOQg3D1CJu24Ct+TDps2NJVhyJmXKgEkvvhIcQW+ge5OSCFkvojHOdu02hJA4g9eUfSBjjLdI+Y7yAJcwNtL29xUTQApTXkeHoLe+CyDVF9D134EZ/8eeafKS1xPvNxnKG7CdchqsdP51wSMYrzhT52mAZzSFbsIA6BQ+/HvNjKrnzbPMa4FtomM2QCZZ49SFYlYmgAAAABJRU5ErkJggg==") !important;
   }
 }
 
 // ---------------------------- RTC connection ---------------------------- \\
-.animatorTop-2Y7x2r {
+.animatorTop-3ltI52 {
   box-shadow: var(--elevation-high);
 
-  > .container-2x5lvQ {
-    > .header-2C89wJ {
-      background-color: var(--background-secondary);
-    }
-
-    > section {
-      border-radius: 0 0 5px 5px;
-      background-color: var(--background-secondary);
-    }
-  }
-}
-
-// ---------------------------- Account Switcher popup ---------------------------- \\
-.container-2R1ffg {
-  background-color: var(--brand-experiment);
-
-  > .pointer-3Odm0y {
-    border-top-color: var(--brand-experiment);
+  .section-2zQkYM {
+    border-radius: 0 0 5px 5px;
+    background-color: var(--background-secondary);
   }
 }
 
 // ---------------------------- Server popout ---------------------------- \\
 #app-mount {
-  .guildPopout-3CgKqR {
+  .guildPopout-G6M0fK {
     background-color: var(--background-accent);
     box-shadow: 0 2px 10px 0 var(--background-primary), 0 0 3.5px 0.1px var(--background-secondary-alt);
   }
 }
 
 // ---------------------------- Emoji info popout ---------------------------- \\
-.popoutLoadingForeground-2mZT61 {
+.popoutLoadingForeground-3xnRkg {
   background-image: linear-gradient(
     90deg,
     var(--background-primary),
@@ -163,12 +131,12 @@
 
 #app-mount {
   // ---------------------------- @everyone ---------------------------- \\
-  .contentWarningPopout-n5JsIs {
+  .contentWarningPopout-WKdbDG {
     transform: translateZ(0);
     box-shadow: 0 5px 15px 0 var(--background-tertiary);
     background-color: var(--background-secondary-alt);
 
-    > .footer-3N9rgh {
+    > .footer-2aeMle {
       background-color: var(--background-secondary);
     }
   }
@@ -183,32 +151,32 @@
   }
 
   // ---------------------------- Autocomplete ---------------------------- \\
-  .autocomplete-1vrmpx {
+  .autocomplete-3NRXG8 {
     background-color: var(--background-secondary-alt);
 
-    .categoryHeader-O1zU94 {
+    .categoryHeader-OpJ1Ly {
       background-color: var(--background-tertiary);
     }
 
-    .selected-1Tbx07 {
+    .selected-3H3-RC {
       background-color: var(--background-primary);
     }
   }
 
   // ---------------------------- Search menu ---------------------------- \\
-  .container-3ayLPN {
+  .container-2McqkF {
     background-color: var(--background-secondary);
     box-shadow: 0 0 0 1px var(--background-tertiary), 0 2px 10px 0 rgba(0, 0, 0, 0.2);
 
-    > .queryContainer-RKFJW- {
+    > .queryContainer-ZunrLZ {
       border-bottom-color: var(--background-tertiary);
     
-      &.focused-2bY0OD {
+      &.focused-2FU0YH {
         background-color: var(--background-tertiary);
       }
     }
 
-    .option-96V44q {
+    .option-2KkUJO {
       &::after {
         background: transparent;
       }
@@ -219,8 +187,7 @@
     }
   }
 
-  .searchAnswer-3Dz2-q,
-  .searchFilter-2ESiM3 {
+  :is(.searchAnswer-23w-CH, .searchFilter-2UfsDk) {
     background-color: var(--background-accent);
   }
 
@@ -263,16 +230,16 @@
     }
   }
 
-  .datePickerHint-3Q1Udw {
+  .datePickerHint-17MnA8 {
     border-top-color: var(--background-modifier-accent);
   }
 
-  .hintValue-29ny8Z {
+  .hintValue-1x-flY {
     background-color: var(--channeltextarea-background);
   }
 
   // ---------------------------- Search results ---------------------------- \\
-  .searchResult-9tQ1uo { // Scrollable search result
+  .searchResult-O9NDji { // Scrollable search result
     overflow: auto;
 
     &::-webkit-scrollbar {
@@ -285,7 +252,7 @@
     }
   }
 
-  .channelName-1JRO3C { // Prettier channel jump button
+  .channelName-3w2Y3c { // Prettier channel jump button
     padding: 5px 0 5px 7px;
     border-radius: 8px;
     background-color: var(--channeltextarea-background);
@@ -301,7 +268,7 @@
   }
 
   // ---------------------------- Add friend to DM ---------------------------- \\
-  .friendSelected-1sa4bG {
+  .friendSelected-3cwmD7 {
     background-color :var(--background-accent);
   }
 }

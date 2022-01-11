@@ -4,46 +4,45 @@
 }
 
 // ---------------------------- Voice calls ---------------------------- \\
-.callContainer-36WRfH {
+.callContainer-HtHELf {
   @at-root #app-mount & {
     background-color: var(--background-secondary-alt);
 
-    .status-1WEaea { // Muted badge on avatar
+    .status-1ZXjSF { // Muted badge on avatar
       background-color: var(--amethyst-red);
     }
   }
 
-  .participantsButton-KYW-IW { // Show/hide participants
+  .participantsButton-1WBdFP { // Show/hide participants
     background-color: var(--background-secondary-alt) !important;
   }
 
-  .background-ujHpbY { // Participant card
+  .background-L8lGH6 { // Participant card
     background-color: var(--background-tertiary) !important;
   }
 
-  .tile-2naSqK { // No one else is here yet...
+  .tile-2TcwiO { // No one else is here yet...
     background-color: var(--background-primary);
   }
 
-  .streamPreview-3YL8OQ {
+  .streamPreview-3Fo29Y {
     background: var(--background-tertiary);
   }
 }
 
-.videoControls-24w7Xp { // Did this so it works for stage containers too
-  .colorable-1bkp8v { // Call buttons
+.videoControls-353CsJ { // Did this so it works for stage containers too
+  .colorable-3rVGna { // Call buttons
     background-color: var(--call-button-normal);
 
-    &:hover,
-    &.active-1QRrIS {
+    &:is(:hover, .active-3D763s) {
       background-color: var(--call-button-hover-active);
     }
 
-    &.primaryDark-3mSFDl { // Camera and Share Your screen
+    &.primaryDark-2UJt1G { // Camera and Share Your screen
       @include call-button(var(--background-accent), var(--background-secondary));
     }
 
-    &.white-3GPOIp { // Mute/unmute
+    &.white-11auuQ { // Mute/unmute
       @include call-button(var(--amethyst-brand), var(--amethyst-brand-hover));
 
       path {
@@ -51,7 +50,7 @@
       }
     }
 
-    &.red-33-Lnk { // Disconnect
+    &.red-3T8maV { // Disconnect
       @include call-button(var(--amethyst-red), red);
     }
   }
@@ -59,15 +58,15 @@
 
 // ---------------------------- Streaming ---------------------------- \\
 #app-mount {
-  .streamPreview-2-WUWT { // Popout from hovering streamer's VC username
+  .streamPreview-3qoMP4 { // Popout from hovering streamer's VC username
     background-color: var(--background-tertiary);
 
-    > .previewContainer-12UlHl { // Top part where preview is embedded
+    > .previewContainer-21fFBz { // Top part where preview is embedded
       background-color: inherit;
     }
   }
 }
 
-.liveQualityIndicator-3XCjEU {
+.liveQualityIndicator-8fb_DX {
   background-color: var(--background-secondary) !important;
 }

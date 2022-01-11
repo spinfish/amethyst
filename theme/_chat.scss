@@ -1,5 +1,5 @@
 // ---------------------------- Text area ---------------------------- \\
-.toolbar-2bjZV7 { // Markdown tooltip
+.toolbar-37BrJ5 { // Markdown tooltip
   box-shadow: 0 0 2px 1px var(--background-tertiary);
   background-color: var(--background-floating);
 
@@ -9,26 +9,26 @@
 }
 
 // ---------------------------- Channels sidebar ---------------------------- \\
-.spine--Wla_O { // Thread marker
+.spine-29OFwR { // Thread marker
   color: var(--channeltextarea-background);
 }
 
 // ---------------------------- Messages ---------------------------- \\
-.hasThread-2k82W0 {
-  .spine-5jbOmI {
+.hasThread-3h-KJV {
+  .spine-2vt3pM {
     --background-accent: var(--amethyst-brand);
   }
 }
 
-.mentioned-xhSam7 {
+.mentioned-Tre-dv {
   &::before {
     background-color: var(--amethyst-brand);
     box-shadow: 0 0 3.5px var(--amethyst-brand);
   }
 }
 
-.replying-1x3H0T, // Message you're replying to
-.ephemeral-1PsL1r { // Clyde
+.replying-eZ7p5z, // Message you're replying to
+.ephemeral-2nDdnn { // Clyde
   background-color: rgba(var(--amethyst-cyan-rgb), 0.075);
 
   &::before {
@@ -37,16 +37,16 @@
   }
 } 
 
-.repliedMessage-VokQwo { // Reply preview above message
+.repliedMessage-3Z6XBG { // Reply preview above message
   &::before {
     border-color: var(--amethyst-brand);
   }
 
-  > .replyBadge-r1su3o {
+  > .replyBadge-LMm_Ic {
     background-color: transparent;
   }
 
-  .replyIcon-1b4Xjp {
+  .replyIcon-20gA8D {
     width: 20px;
     height: 10px;
     color: var(--interactive-active);
@@ -55,32 +55,34 @@
 
 // ---------------------------- Cards ---------------------------- \\
 #app-mount {
-  .tile-2OwFgW { // Nitro gift card
+  .tile-2mmK5T { // Nitro gift card
     background-color: var(--background-secondary-alt);
 
-    .invalidPoop-pnUbq7 { // Gift link expired background
+    .invalidPoop--w1123 { // Gift link expired background
       background-color: rgba(var(--amethyst-primary-rgb), 0.5);
     }
   }
 }
 
-.invite-18yqGF { // Spotify invite, game invite
-  @at-root #app-mount & {
-    border-color: var(--background-tertiary);
-    background-color: var(--background-secondary-alt);
-  }
+.invite-3uuHYQ { // Spotify invite, game invite
+  @at-root {
+    #app-mount & {
+      border-color: var(--background-tertiary);
+      background-color: var(--background-secondary-alt);
+    }
 
-  @at-root .root-1gCeng & {
-    box-shadow: 0 0 5px 1px var(--background-secondary-alt);
+    .root-g14mjS & {
+      box-shadow: 0 0 5px 1px var(--background-secondary-alt);
+    }
   }
 }
 
-.wrapper-35wsBm { // Guild invites
-  .guildIconImage-3qTk45 {
+.wrapper-1HIH0j { // Guild invites
+  .guildIconImage-74OdmM {
     background-color: var(--background-primary);
   }
 
-  .resolvingBackground-351jK_ {
+  .resolvingBackground-1MSH01 {
     background-image: linear-gradient(90deg,
       var(--background-primary),
       var(--channeltextarea-background),
@@ -90,7 +92,7 @@
 }
 
 // ---------------------------- Chat bars ---------------------------- \\
-.messagesErrorBar-nyJGU7 { // Messages Failed To Load
+.messagesErrorBar-1IQ1rH { // Messages Failed To Load
   background-color: rgba(var(--amethyst-red-rgb), 0.85) !important;
 }
 
@@ -98,21 +100,21 @@
   --divider-color: var(--amethyst-brand); // Or red?
   border-width: 3px;
 
-  > .unreadPill-2HyYtt {
+  > .unreadPill-3nEWYM {
     transform: translateY(-1px);
   }
 }
 
 // ---------------------------- Spoilers ---------------------------- \\
 #app-mount {
-  .spoilerWarning-2aAZq1 { // Attachments
+  .spoilerWarning-8ovW0v { // Attachments
     background-color: var(--background-tertiary);
   }
 
-  .spoilerText-3p6IlD { // Messages
+  .spoilerText-27bIiA { // Messages
     border-radius: 5px;
 
-    &.hidden-HHr2R9 {
+    &.hidden-3B-Rum {
       transition: background-color 0.25s;
       background-color: var(--background-secondary-alt);
 
@@ -122,7 +124,7 @@
     }
 
     &[aria-expanded="true"] {
-      background-color: var(--background-modifier-selected);
+      background-color: rgba(var(--amethyst-primary-rgb), 0.1);
     }
   }
 }

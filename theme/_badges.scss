@@ -1,36 +1,32 @@
 // ---------------------------- Bot tags ---------------------------- \\
-.botTag-2WPJ74 {
+.botTag-7aX5WZ {
   background-color: rgba(var(--amethyst-cyan-rgb), 0.75);
 }
 
 // ---------------------------- New mentions ---------------------------- \\
-.mention-1f5kbO {
+.mention-3XBnnZ{
   background-color: var(--amethyst-red);
 }
 
 // ---------------------------- Circle mentions ---------------------------- \\
-.wrapper-232cHJ { // Unread tab
+.wrapper-2olG5t { // Unread tab
   background-color: var(--amethyst-red);
 }
 
-.numberBadge-2s8kKX { // Pinged in a server, new DM
+.numberBadge-37OJ3S { // Pinged in a server, new DM
   background-color: var(--amethyst-red) !important;
 }
 
 // ---------------------------- Text badges ---------------------------- \\
-.textBadge-1iylP6 {
+.textBadge-1fdDPJ {
   // Blurple badges e.g. BETA and NEW
-  &:is(.betaTag-2ehOEB, .newBadge-1Is7Nf) { // // [style="background-color: hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%);"]
+  &:is(.betaTag-3pnIxA, .newBadge-1Is7Nf) { // // [style="background-color: hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%);"]
     background-color: var(--brand-experiment) !important;
   }
 
   // Red badges e.g. LIVE
   &[style="background-color: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);"] {
     background-color: var(--amethyst-brand) !important;
-  }
-
-  &.tag-PX6CDi { // NEW Nitro offer tag
-    background: linear-gradient(90deg, var(--amethyst-nitro-gradient-colours));
   }
 }
 

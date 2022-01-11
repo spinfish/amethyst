@@ -1,0 +1,30 @@
+#app-mount {
+  // ---------------------------- Friend list ---------------------------- \\
+  .peopleColumn-29fq28 {
+    background-color: var(--background-accent);
+  }
+
+  // ---------------------------- Activity card ---------------------------- \\
+  .itemCard-3Etziu {
+    border: none;
+    box-shadow: 0 0 0 1px var(--background-secondary-alt);
+    transition: 200ms background-color;
+
+    &:hover {
+      background-color: var(--background-modifier-hover);
+    }
+
+    &.active-1W_Gl9 {
+      background-color: var(--background-modifier-selected);
+    }
+
+    .inset-SbsSFp,
+    .separator-2OaeRP {
+      background-color: inherit;
+    }
+
+    .applicationStreamingPreviewWrapper-7j27t8 {
+      background-color: var(--background-secondary-alt);
+    }
+  }
+}
