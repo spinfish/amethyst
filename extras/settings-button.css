@@ -26,35 +26,35 @@
  * Cooler settings button (originally by me, improved by Loremly! :D)
  */
 
-.unreadMentionsIndicatorTop-2-tcdU {
+.unreadMentionsIndicatorTop-2bTgUU {
   top: calc(124px + var(--amethyst-margin));
 }
 
-.tutorialContainer-11ICd5 :is(.wrapper-25eVIn, .pill-gcH-8B) {
+.tutorialContainer-1pL9QS :is(.wrapper-28eC3z, .pill-L_aLMQ) {
   margin-top: 12px;
 }
 
-.tutorialContainer-11ICd5 > .listItem-2Ig28I {
+.tutorialContainer-1pL9QS > .listItem-3SmSlK {
   background: var(--background-accent);
   padding-bottom: 96%;
   border-radius: var(--amethyst-radius);
 }
 
-.scroller-1Bvpku {
+.scroller-3X7KbA {
   margin-top: calc(129px + var(--amethyst-margin));
   contain: none;
 }
 
-.scroller-1Bvpku > .tutorialContainer-11ICd5 {
+.scroller-3X7KbA > .tutorialContainer-1pL9QS {
   position: fixed;
   top: calc(22px + (0.5 * var(--amethyst-margin)));
 }
 
-.scroller-1Bvpku .guildSeparator-nWMCrR {
+.scroller-3X7KbA .guildSeparator-a4uisj {
   display: none;
 }
 
-.container-3baos1:last-child .button-14-BFJ:last-child {
+.container-YkUktl:last-child .button-12Fmur:last-child {
   background-color: var(--channeltextarea-background);
   color: var(--text-normal);
   transition: 150ms ease-out;
@@ -68,12 +68,12 @@
   /** ^^ 35 + 48 + 8 + (0.5 * var(--amethyst-margin)) */
 }
 
-.container-3baos1:last-child .button-14-BFJ:last-child svg {
+.container-YkUktl:last-child .button-12Fmur:last-child svg {
   height: 28px;
   width: 28px;
 }
 
-.container-3baos1:last-child .button-14-BFJ:last-child::before {
+.container-YkUktl:last-child .button-12Fmur:last-child::before {
   transition: 275ms ease;
   transition-property: transform, height;
   background-color: white;
@@ -86,13 +86,21 @@
   left: -11px;
 }
 
-.container-3baos1:last-child .button-14-BFJ:last-child:hover {
+.container-YkUktl:last-child .button-12Fmur:last-child:hover {
   background-color: var(--brand-experiment);
   border-radius: 35%;
   color: white;
 }
 
-.container-3baos1:last-child .button-14-BFJ:last-child:hover::before {
+.container-YkUktl:last-child .button-12Fmur:last-child:hover::before {
   transform: scaleX(1);
   height: 20px;
+}
+
+.notice-2HEN-u + .layers-OrUESM .tutorialContainer-1pL9QS {
+  top: calc(22px + (0.5 * var(--amethyst-margin)) + 41px);
+}
+
+.notice-2HEN-u + .layers-OrUESM .container-YkUktl:last-child .button-12Fmur:last-child {
+  top: calc(91px + (0.5 * var(--amethyst-margin)) + 41px);  
 }

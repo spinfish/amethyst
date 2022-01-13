@@ -64,7 +64,7 @@
 }
 
 // ---------------------------- Scrollers ---------------------------- \\
-.thin-1ybCId {
+.thin-31rlnD {
   &::-webkit-scrollbar {
     width: 6px;
 
@@ -74,7 +74,7 @@
   }
 }
 
-.auto-Ge5KZx {
+.auto-2K3UW5 {
   &::-webkit-scrollbar {
     width: 14px;
 
@@ -93,17 +93,17 @@
 .notice-2HEN-u {
   @include container($radius: true);
 
-  &:is(/* .colorInfo-2URYW5, */ .notice-3uyY6c) {
-    background-color: var(--amethyst-brand);
+  &:is(.colorInfo-1kEg3T, .notice-3uyY6c) {
+    background: var(--brand-experiment);
   }
 
   &.colorSuccess-1hnbW2 {
-    background-color: var(--amethyst-green);
+    background: var(--amethyst-green);
   }
 
-  &.noticeWrapper-8z511t { // BD
+  &.noticeWrapper-8z511t { // BD (BDFDB)
+    @include container($margin: ("right", "left", "bottom"));
     border-radius: var(--amethyst-radius) !important; // Plugin moment
-    margin-bottom: calc(var(--amethyst-margin) + 1px);
   }
 
       // &.colorBrand-2zeG8h {}
@@ -131,12 +131,12 @@
   @include container($gap: true);
 
   > .resizeHandle-PBRzPC { // Resizer bar on thread split view
-    @include container($background: "primary", $radius: true, $margin: "");//bottom
+    @include container($background: "primary", $radius: true);
     height: unset;
   }
 
   > .chat-2ZfjoI { // Title bar/member sidebar/chat container
-    @include container($gap: true, $background: "tertiary", $margin: "");//bottom
+    @include container($gap: true, $background: "tertiary");
 
     > .wrapper-1gVUIN { // Call container background
       @include container($background: "tertiary");
@@ -156,7 +156,7 @@
   }
 
   > .noChannel-1GDIAZ { // "You find yourself in a strange place..."
-    @include container($background: "accent", $radius: true, $margin: "");//bottom
+    @include container($background: "accent", $radius: true);
   }
 }
 
@@ -254,7 +254,7 @@
   }
 
   .scroller-3X7KbA {
-    @include container($radius: true, $background: "accent", $margin: "");//bottom
+    @include container($radius: true, $background: "accent");
     padding-top: calc(var(--amethyst-padding) * 1.75);
   }
 }
