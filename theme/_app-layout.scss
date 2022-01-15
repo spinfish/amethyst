@@ -51,14 +51,10 @@
 }
 
 // ---------------------------- "Body" container ---------------------------- \\
-.container-2lgZY8 {
+.container-1eFtFS {
   @at-root {
-    .platform-web & {
+    :is(.platform-web, .platform-win) & { // Might not work on OSX ?
       @include container($margin: "top");
-    }
-
-    .platform-win & {
-      @include container($margin: ("top": 0.5)); // Account for titlebar
     }
   }
 }
@@ -97,12 +93,9 @@
     background: var(--brand-experiment);
   }
 
-  &.colorSuccess-1hnbW2 {
-    background: var(--amethyst-green);
-  }
-
   &.noticeWrapper-8z511t { // BD (BDFDB)
     @include container($margin: ("right", "left", "bottom"));
+    top: var(--amethyst-margin);
     border-radius: var(--amethyst-radius) !important; // Plugin moment
   }
 
@@ -379,7 +372,7 @@
 // ---------------------------- Settings ---------------------------- \\
 .layer-86YKbF {
   ~ .layer-86YKbF { // Thanks DevilBro ig lol
-    @include container($background: "tertiary", $margin: "bottom");  
+    @include container($background: "tertiary", $margin: ("top", "bottom"));  
   }
 }
 

@@ -9,12 +9,8 @@
   display: none !important;
 }
 
-.platform-web .container-2lgZY8 {
+:is(.platform-web, .platform-win) .container-1eFtFS {
   margin-top: var(--amethyst-margin);
-}
-
-.platform-win .container-2lgZY8 {
-  margin-top: calc(var(--amethyst-margin) * 0.5);
 }
 
 .thin-31rlnD::-webkit-scrollbar {
@@ -41,13 +37,11 @@
 .notice-2HEN-u:is(.colorInfo-1kEg3T, .notice-3uyY6c) {
   background: var(--brand-experiment);
 }
-.notice-2HEN-u.colorSuccess-1hnbW2 {
-  background: var(--amethyst-green);
-}
 .notice-2HEN-u.noticeWrapper-8z511t {
   margin-right: var(--amethyst-margin);
   margin-left: var(--amethyst-margin);
   margin-bottom: var(--amethyst-margin);
+  top: var(--amethyst-margin);
   border-radius: var(--amethyst-radius) !important;
 }
 
@@ -264,6 +258,7 @@
 
 .layer-86YKbF ~ .layer-86YKbF {
   background-color: var(--background-tertiary);
+  margin-top: var(--amethyst-margin);
   margin-bottom: var(--amethyst-margin);
 }
 
@@ -1325,6 +1320,7 @@
   --brand-experiment-500: var(--amethyst-brand);
   --control-brand-foreground: var(--amethyst-primary);
   --font-display: var(--font-family) !important;
+  --status-positive-background: var(--amethyst-green);
   --amethyst-padding: 4px;
   --amethyst-margin: 4px;
   --amethyst-radius: 10px;

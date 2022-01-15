@@ -47,7 +47,7 @@
 
 .scroller-3X7KbA > .tutorialContainer-1pL9QS {
   position: fixed;
-  top: calc(22px + (0.5 * var(--amethyst-margin)));
+  top: calc(22px + var(--amethyst-margin));
 }
 
 .scroller-3X7KbA .guildSeparator-a4uisj {
@@ -64,8 +64,8 @@
   height: 48px;
   width: 48px;
   left: calc(12px + var(--amethyst-margin));
-  top: calc(91px + (0.5 * var(--amethyst-margin)));
-  /** ^^ 35 + 48 + 8 + (0.5 * var(--amethyst-margin)) */
+  top: calc(90px + var(--amethyst-margin));
+  /** ^^ 90px = titlebar (22) + listItemWrapper (60) + 8px button spacing */
 }
 
 .container-YkUktl:last-child .button-12Fmur:last-child svg {
@@ -98,9 +98,10 @@
 }
 
 .notice-2HEN-u + .layers-OrUESM .tutorialContainer-1pL9QS {
-  top: calc(22px + (0.5 * var(--amethyst-margin)) + 41px);
+  /** 36px = height of notice */
+  top: calc(22px + calc(var(--amethyst-margin) * 2) + 36px);
 }
 
 .notice-2HEN-u + .layers-OrUESM .container-YkUktl:last-child .button-12Fmur:last-child {
-  top: calc(91px + (0.5 * var(--amethyst-margin)) + 41px);  
+  top: calc(90px + calc(var(--amethyst-margin) * 2) + 36px);  
 }
