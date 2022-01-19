@@ -1,0 +1,121 @@
+/**
+ * MIT License
+ *
+ * Copyright (c) 2022 spinfish
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+/**
+ * Custom HLJS styling
+ * 
+ * Simply make changes to the HLJS variables in :root to adjust
+ * the colour scheme to your likings.
+ * 
+ * You can view the different colour schemes in the README :)
+ */
+
+.hljs-keyword {
+  color: var(--amethyst-hljs-6);
+}
+.hljs-built_in {
+  color: var(--amethyst-hljs-8);
+}
+.hljs-type {
+  color: var(--amethyst-hljs-3);
+}
+.hljs-literal {
+  color: var(--amethyst-hljs-4);
+}
+.hljs-number {
+  color: var(--amethyst-hljs-3);
+}
+.hljs-regexp {
+  color: var(--amethyst-hljs-8);
+}
+.hljs-string {
+  color: var(--amethyst-hljs-3);
+}
+.hljs-subst {
+  color: var(--amethyst-hljs-4);
+}
+.hljs-class > .hljs-title {
+  color: var(--amethyst-hljs-1);
+}
+.hljs-variable {
+  color: var(--amethyst-hljs-1);
+}
+.hljs-title {
+  color: var(--amethyst-hljs-5);
+}
+.hljs-params {
+  color: var(--amethyst-hljs-4);
+}
+.hljs-meta {
+  color: var(--amethyst-hljs-5);
+}
+.hljs-meta-keyword {
+  color: var(--amethyst-hljs-3);
+}
+
+.hljs-section {
+  color: var(--amethyst-hljs-1);
+}
+.hljs-tag {
+  color: var(--amethyst-hljs-3);
+}
+.hljs-name {
+  color: var(--amethyst-hljs-1);
+}
+.hljs-attr,
+.hljs-attribute {
+  color: var(--amethyst-hljs-2);
+}
+
+.hljs-bullet {
+  color: var(--amethyst-hljs-1);
+}
+.hljs-emphasis {
+  color: var(--amethyst-hljs-2);
+}
+.hljs-strong {
+  color: var(--amethyst-hljs-6);
+}
+.hljs-link {
+  color: var(--amethyst-hljs-1);
+}
+.hljs-quote {
+  color: var(--amethyst-hljs-7);
+}
+
+.hljs-selector-tag {
+  color: var(--amethyst-hljs-6);
+}
+.hljs-selector-id {
+  color: var(--amethyst-hljs-4);
+}
+.hljs-selector-class {
+  color: var(--amethyst-hljs-1);
+}
+.hljs-selector-attr {
+  color: var(--amethyst-hljs-8);
+}
+.hljs-selector-pseudo {
+  color: var(--amethyst-hljs-7);
+}
