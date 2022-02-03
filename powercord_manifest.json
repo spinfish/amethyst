@@ -1,8 +1,9 @@
 {
   "name": "Amethyst",
   "description": "A calm, deep purple theme for those seeking serenity.",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "author": "legume#0173",
   "theme": "_index.scss",
-  "license": "MIT"
+  "license": "MIT",
+  "splashTheme": "splash.css"
 }

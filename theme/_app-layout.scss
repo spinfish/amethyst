@@ -129,7 +129,7 @@
   }
 
   > .chat-2ZfjoI { // Title bar/member sidebar/chat container
-    @include container($gap: true, $background: "tertiary");
+    @include container($gap: true, $radius: true, $background: "tertiary");
 
     > .wrapper-1gVUIN { // Call container background
       @include container($background: "tertiary");
@@ -155,6 +155,7 @@
 
 .chatContent-3KubbW { // Chat background
   @include container($background: "primary", $radius: true);
+  overflow: hidden;
 }
 
 // ---------------------------- Channels sidebar ---------------------------- \\

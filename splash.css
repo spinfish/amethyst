@@ -1,0 +1,15 @@
+#splash {
+  background: rgb(28, 0, 40);
+}
+
+.progress .progress-bar {
+  background: rgb(35, 4, 49);
+}
+
+.progress .progress-bar .complete {
+  background: rgb(104, 47, 134);
+}
+
+#splash .splash-inner-dl .dl-select-frame .Select-menu-outer {
+  background: rgb(28, 0, 40);
+}
